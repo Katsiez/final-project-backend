@@ -5,7 +5,16 @@ import mongoose from "mongoose";
 import crypto from "crypto";
 import bcrypt from "bcrypt";
 import endpoints from "express-list-endpoints";
-//import knex from "knex"
+
+import User from "./models/user";
+import Book from "./models/book";
+import Bag from "./models/bag";
+
+//Error messages from the server
+const ERR_CANNOT_LOGIN = "Please try logging in again";
+const ERR_CANNOT_ACCESS = "Access token is incorrect or missing";
+const ERR_CANNOT_CREATE_USER =
+  "Error while creating the user, please try again";
 
 const mongoUrl =
   process.env.MONGO_URL || "mongodb://localhost/finalProjectBackend";
@@ -15,40 +24,6 @@ mongoose.connect(mongoUrl, {
 });
 mongoose.Promise = Promise;
 mongoose.set("useCreateIndex", true);
-
-//Mongoose Schema for the User model - login and signup
-const userSchema = new mongoose.Schema({
-  firstName: {
-    type: String,
-    minlength: 5,
-    maxlength: 20,
-    unique: true,
-    required: true,
-  },
-  lastName: {
-    type: String,
-    minlength: 5,
-    maxlength: 20,
-    unique: true,
-    required: true,
-  },
-  email: {
-    type: String,
-    unique: true,
-    required: true,
-  },
-  password: {
-    type: String,
-    minlength: 6,
-    required: true,
-  },
-  accessToken: {
-    type: String,
-    default: () => crypto.randomBytes(128).toString("hex"),
-  },
-});
-
-//Another Schema for books here?
 
 const authenticateUser = async (req, res, next) => {
   try {
@@ -62,18 +37,12 @@ const authenticateUser = async (req, res, next) => {
     } else if (!user) {
       throw "User not found";
     } else {
-      res
-        .status(401)
-        .json({ loggedOut: true, message: "Please try logging in again" });
+      res.status(401).json({ loggedOut: true, message: ERR_CANNOT_LOGIN });
     }
   } catch (err) {
-    res
-      .status(403)
-      .json({ message: "Access token is incorrect or missing", errors: err });
+    res.status(403).json({ message: ERR_CANNOT_ACCESS, errors: err });
   }
 };
-
-const User = mongoose.model("User", userSchema);
 
 //   PORT=8000 npm start
 const port = process.env.PORT || 8000;
@@ -88,12 +57,14 @@ app.get("/", (req, res) => {
   res.send(endpoints(app));
 });
 
+//***USER MODEL***//
+
 //Login
 app.post("/login", async (req, res) => {
   try {
     const { email, password } = req.body;
     const user = await User.findOne({
-      email
+      email,
     });
     console.log(user);
     if (user && bcrypt.compareSync(password, user.password)) {
@@ -102,7 +73,7 @@ app.post("/login", async (req, res) => {
         accessToken: user.accessToken,
         name: user.name,
         email: user.email,
-        password: user.password
+        password: user.password,
       });
     } else {
       res.status(404).json({
@@ -118,28 +89,30 @@ app.post("/login", async (req, res) => {
   }
 });
 
-// Sign-up
+//Sign-up
 app.post("/signup", async (req, res) => {
   try {
-    const { name, email, password } = req.body;
-    console.log("!!!", name, email, password);
+    const { firstName, lastName, email, password } = req.body;
+    console.log("!!!", firstName, lastName, email, password);
     const user = new User({
-      name,
+      firstName,
+      lastName,
       email,
       password: bcrypt.hashSync(password),
     });
-    await user.save();
+    const userCreated = await user.save();
     res.status(201).json({
-      message: "User created!",
-      id: user._id,
-      accessToken: user.accessToken,
-      name: user.name,
-      email: user.email,
-      password: user.password,
+      message: "Account created!",
+      userId: userCreated._id,
+      accessToken: userCreated.accessToken,
+      firstName: userCreated.firstName,
+      lastName: userCreated.lastName,
+      email: userCreated.email,
+      password: userCreated.password,
     });
   } catch (err) {
     res.status(400).json({
-      message: "Could not create user!",
+      message: ERR_CANNOT_CREATE_USER,
       errors: err.errors,
     });
   }
@@ -148,24 +121,80 @@ app.post("/signup", async (req, res) => {
 //User specific info, secret page only available after log in, found in 'userprofile'
 app.get("/users/:id/verified", authenticateUser);
 app.get("/users/:id/verified", async (req, res) => {
-  try {
-    const userId = req.params.id;
-    if (userId != req.user._id) {
-      console.log(
-        "Authenticated user does not have access to this secret.  It's someone else's!"
-      );
-      throw "Access denied";
-    }
-    const secretMessage = `This is a secret message for ${req.user.name}. Welcome onboard!`;
-    res.status(200).json({
-      secretMessage,
+  const user = await User.findById(req.params.id);
+  if (user) {
+    res.status(201).json({
+      userId: userCreated._id,
+      firstName: userCreated.firstName,
+      lastName: userCreated.lastName,
+      email: userCreated.email,
     });
-  } catch (err) {
-    res.status(403).json({
-      error: "Access Denied",
-    });
+  } else {
+    res.status(400).json({ message: "Access denied" });
   }
 });
+
+//***BOOK MODEL***//
+
+app.use((request, response, next) => {
+  if (mongoose.connection.readyState === 1) {
+    console.log("Database working")
+    next();
+  } else {
+    response.status(503).json({ error: "Service unavailable" });
+  }
+});
+
+//Show all books
+app.get('/books', async (request, response) => {
+  const {title} = req.query
+  if (title) {
+    const allBooks = await Book.find({ title: title});
+  response.json(allBooks);
+  } else {
+    const allBooks = await Book.find()
+    response.json(allBooks);
+  }
+});
+
+//Show all books by genre
+app.get('/books/genre', async (req, res) => {
+  const { genre } = req.query
+  if (genre) {
+    const allBooks = await Book.find({ genre: genre })
+    res.json(allBooks)
+  } else {
+    const allBooks = await Book.find({
+      $or: [
+        { genre: /Fiction/ },
+        { genre: /Nonfiction/ },
+        { genre: /Mystery/ },
+        { genre: /Thriller/ },
+        { genre: /Horror/ }
+        //add more genres as you go??
+      ]
+    })
+    res.json(allBooks)
+  }
+})
+
+//Show all bestsellers
+app.get('books/bestseller', async (req,res) => {
+  const { bestseller } = req.body
+    if (bestseller === "Yes") {
+      const allBooks = await Book.fin({bestseller: bestseller})
+      res.json(allBooks)
+    }
+})
+
+//Show all new releases
+app.get('books/new_releases', async (req,res) => {
+  const { new_releases } = req.body
+    if (new_releases === "Yes") {
+      const allBooks = await Book.fin({new_releases: new_releases})
+      res.json(allBooks)
+    }
+})
 
 // Start the server
 app.listen(port, () => {

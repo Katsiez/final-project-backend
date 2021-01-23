@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import booksData from "./data/books.json";
 
 export const Book = mongoose.model("Book", {
   bookID: {
@@ -17,7 +18,7 @@ export const Book = mongoose.model("Book", {
     type: Number
   },
   bestseller: {
-    type: Boolean
+    type: String
   },
   num_pages: {
     type: Number
@@ -26,9 +27,21 @@ export const Book = mongoose.model("Book", {
     type: String
   },
   new_releases: {
-    type: Boolean
+    type: String
   },
   synopsis: {
     type: String
   }
 });
+
+//Seed the database
+// if (process.env.RESET_DATABASE) {
+  const seedDatabase = async () => {
+    await Book.deleteMany({});
+    
+    booksData.forEach((bookData) => {
+      new Book(bookData).save();
+    });
+  };
+  seedDatabase();
+// }
