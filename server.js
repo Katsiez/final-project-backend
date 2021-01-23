@@ -16,6 +16,7 @@ mongoose.connect(mongoUrl, {
 mongoose.Promise = Promise;
 mongoose.set("useCreateIndex", true);
 
+//Mongoose Schema for the User model - login and signup
 const userSchema = new mongoose.Schema({
   firstName: {
     type: String,
@@ -46,6 +47,8 @@ const userSchema = new mongoose.Schema({
     default: () => crypto.randomBytes(128).toString("hex"),
   },
 });
+
+//Another Schema for books here?
 
 const authenticateUser = async (req, res, next) => {
   try {
@@ -143,8 +146,8 @@ app.post("/signup", async (req, res) => {
 });
 
 //User specific info, secret page only available after log in, found in 'userprofile'
-app.get("/users/:id/secret", authenticateUser);
-app.get("/users/:id/secret", async (req, res) => {
+app.get("/users/:id/verified", authenticateUser);
+app.get("/users/:id/verified", async (req, res) => {
   try {
     const userId = req.params.id;
     if (userId != req.user._id) {
