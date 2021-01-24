@@ -10,8 +10,6 @@ import User from "./models/user";
 // import Book from "./models/book";
 import Bag from "./models/bag";
 import booksData from "./models/data/books.json";
-import { readFile } from "fs";
-
 
 //error messages from the server
 const error_CANNOT_LOGIN = "Please try logging in again";
@@ -65,7 +63,7 @@ const Book = mongoose.model("Book", {
 //* USER AUTHENTICATION *//
 const authenticateUser = async (req, res, next) => {
   try {
-    const user = await User.findOne({ accessToken: req.header('Authorization') })
+    const user = await User.findOne({ accessToken: req.header("Authorization") })
     if (user) {
       req.user = user
       next()
@@ -155,7 +153,7 @@ app.post("/signup", async (req, res) => {
   }
 });
 
-//User specific info, secret page only available after log in, found in 'userprofile'
+//User specific info, secret page only available after log in, found in "userprofile"
 app.get("/users/:id/verified", authenticateUser);
 app.get("/users/:id/verified", async (req, res) => {
   const user = await User.findById(req.params.id);
@@ -183,7 +181,7 @@ app.get("/users/:id/verified", async (req, res) => {
   };
   seedDatabase();
 // }
-app.get('/books', async (req, res) => {
+app.get("/books", async (req, res) => {
   const allBooks = await Book.find();
   res.json(allBooks);
 });
@@ -207,7 +205,7 @@ app.get("/books/:genre", async (req, res) => {
 
 //Show all bestsellers
 //http://localhost:8000/books/bestseller/bestsellers
-app.get('/books/bestseller/:bestsellers', async (req,res) => {
+app.get("/books/bestseller/:bestsellers", async (req,res) => {
   const bestsellerBooks = req.params.bestsellers
   let filteredBooks = booksData;
 
@@ -221,7 +219,7 @@ app.get('/books/bestseller/:bestsellers', async (req,res) => {
 })
 
 //Show all new releases
-app.get('/books/new_releases/:new_releases', async (req,res) => {
+app.get("/books/new_releases/:new_releases", async (req,res) => {
   const newreleasesBooks = req.params.new_releases
   let filteredBooks = booksData;
 
@@ -234,6 +232,61 @@ app.get('/books/new_releases/:new_releases', async (req,res) => {
     } 
 })
 
+//***BAG MODEL***//
+//Add books to shopping bag
+app.post("/bag", async (req, res) => {
+  try {
+    const {title, authors, quanitity } = req.body
+    //addd image and price to this const??
+    const bagItem = new Bag({
+      title,
+      authors,
+      quanitity
+    })
+    const newBagItem = await bagItem.save()
+    res.status(201).json({ message: "Book added to your bag", item: newBagItem})
+  } catch (err) {
+    res.status(400).json({ message: "Something went wrong. Try adding that book in again!", errors: err })
+  }
+}) 
+
+//Not sure if I want to have this part, but to take an item out, I probably need to have an endpoint to add more items first??
+//Up the quantity of books
+app.put("/bag/:id/add", async (req, res) => {
+  const { id } = req.params
+  const book = await Bag.findOne({ id: id })
+  console.log(book)
+  try {
+    if (book.quantity === 1) {
+      const removeBook = await Bag.deleteOne({ id: id })
+      res.status(201).json({ message: `Book removed from shopping bag`, item: removeBook })
+    } else {
+      const updatedBagItem = await Bag.updateOne({ id: id }, { $inc: { quantity: -1 } })
+      res.status(201).json({ message: `Updated shopping bag with with book id:${id}`, item: updatedBagItem })
+    }
+  } catch (err) {
+    res.status(400).json({ message: `Could not update shopping bag with book id:${id}`, errors: err })
+  }
+})
+
+//Remove one book (1 quantity)
+app.delete('/bag/:id/remove', async (req, res) => {
+  const { id } = req.params
+  const removeBook = await Bag.deleteOne({ id: id })
+  res.status(201).json({ message: `Book with id:${id} deleted from shopping bag`, item: removeBook })
+})
+
+//Remove all books from shopping bag, clear all
+app.delete('/bag', async (req, res) => {
+  const bagItems = await Bag.deleteMany()
+  res.status(201).json({ message: 'Your shopping bag is empty', items: bagItems })
+})
+
+//Find books added to shopping bag
+app.get("/bag", async (req, res) => {
+  const bagItems = await Bag.find()
+  res.status(201).json({ message: "Found some books in your shopping bag!", bagItems: bagItems })
+})
 
 // Start the server
 app.listen(port, () => {
