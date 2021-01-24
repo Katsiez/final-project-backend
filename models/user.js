@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import crypto from "crypto";
 
-export const User = mongoose.model("User", {
+const userSchema = new mongoose.Schema({
 	firstName: {
 	  type: String,
 	  minlength: 5,
@@ -31,3 +31,5 @@ export const User = mongoose.model("User", {
 	  default: () => crypto.randomBytes(128).toString("hex"),
 	},
   });
+
+  const User = mongoose.model("User", userSchema);

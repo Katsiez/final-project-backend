@@ -7,14 +7,17 @@ import bcrypt from "bcrypt";
 import endpoints from "express-list-endpoints";
 
 import User from "./models/user";
-import Book from "./models/book";
+// import Book from "./models/book";
 import Bag from "./models/bag";
+import booksData from "./models/data/books.json";
+import { readFile } from "fs";
 
-//Error messages from the server
-const ERR_CANNOT_LOGIN = "Please try logging in again";
-const ERR_CANNOT_ACCESS = "Access token is incorrect or missing";
-const ERR_CANNOT_CREATE_USER =
-  "Error while creating the user, please try again";
+
+//error messages from the server
+const error_CANNOT_LOGIN = "Please try logging in again";
+const error_CANNOT_ACCESS = "Access token is incorrect or missing";
+const error_CANNOT_CREATE_USER =
+  "error while creating the user, please try again";
 
 const mongoUrl =
   process.env.MONGO_URL || "mongodb://localhost/finalProjectBackend";
@@ -25,25 +28,54 @@ mongoose.connect(mongoUrl, {
 mongoose.Promise = Promise;
 mongoose.set("useCreateIndex", true);
 
+//books model that for now lives here
+const Book = mongoose.model("Book", {
+  bookID: {
+    type: Number
+  },
+  title: {
+    type: String
+  },
+  authors: {
+    type: String
+  },
+  average_rating: {
+    type: Number
+  },
+  isbn13: {
+    type: Number
+  },
+  bestseller: {
+    type: String
+  },
+  num_pages: {
+    type: Number
+  },
+  genre: {
+    type: String
+  },
+  new_releases: {
+    type: String
+  },
+  synopsis: {
+    type: String
+  }
+});
+
+//* USER AUTHENTICATION *//
 const authenticateUser = async (req, res, next) => {
   try {
-    const accessToken = req.header("Authorization");
-    const user = await User.findOne({
-      accessToken,
-    });
+    const user = await User.findOne({ accessToken: req.header('Authorization') })
     if (user) {
-      req.user = user;
-      next();
-    } else if (!user) {
-      throw "User not found";
+      req.user = user
+      next()
     } else {
-      res.status(401).json({ loggedOut: true, message: ERR_CANNOT_LOGIN });
+      res.status(401).json({ loggedOut: true, message: error_CANNOT_LOGIN })
     }
-  } catch (err) {
-    res.status(403).json({ message: ERR_CANNOT_ACCESS, errors: err });
+  } catch (error) {
+    res.status(403).json({ message: error_CANNOT_ACCESS, errors: error.errors })
   }
-};
-
+}
 //   PORT=8000 npm start
 const port = process.env.PORT || 8000;
 const app = express();
@@ -62,9 +94,12 @@ app.get("/", (req, res) => {
 //Login
 app.post("/login", async (req, res) => {
   try {
-    const { email, password } = req.body;
-    const user = await User.findOne({
+    const {
       email,
+      password
+    } = req.body;
+    const user = await User.findOne({
+      email
     });
     console.log(user);
     if (user && bcrypt.compareSync(password, user.password)) {
@@ -81,7 +116,7 @@ app.post("/login", async (req, res) => {
         message: "Incorrect username and/or password",
       });
     }
-  } catch (err) {
+  } catch (error) {
     res.status(404).json({
       notFound: true,
       message: "Incorrect username and/or password",
@@ -101,6 +136,7 @@ app.post("/signup", async (req, res) => {
       password: bcrypt.hashSync(password),
     });
     const userCreated = await user.save();
+
     res.status(201).json({
       message: "Account created!",
       userId: userCreated._id,
@@ -110,10 +146,11 @@ app.post("/signup", async (req, res) => {
       email: userCreated.email,
       password: userCreated.password,
     });
-  } catch (err) {
+    
+  } catch (error) {
     res.status(400).json({
-      message: ERR_CANNOT_CREATE_USER,
-      errors: err.errors,
+      message: error_CANNOT_CREATE_USER,
+      errors: error.errors,
     });
   }
 });
@@ -135,66 +172,68 @@ app.get("/users/:id/verified", async (req, res) => {
 });
 
 //***BOOK MODEL***//
-
-app.use((request, response, next) => {
-  if (mongoose.connection.readyState === 1) {
-    console.log("Database working")
-    next();
-  } else {
-    response.status(503).json({ error: "Service unavailable" });
-  }
+//Seed the database
+// if (process.env.RESET_DATABASE) {
+  const seedDatabase = async () => {
+    await Book.deleteMany({});
+    
+    booksData.forEach((bookData) => {
+      new Book(bookData).save();
+    });
+  };
+  seedDatabase();
+// }
+app.get('/books', async (req, res) => {
+  const allBooks = await Book.find();
+  res.json(allBooks);
 });
 
-//Show all books
-app.get('/books', async (request, response) => {
-  const {title} = req.query
-  if (title) {
-    const allBooks = await Book.find({ title: title});
-  response.json(allBooks);
-  } else {
-    const allBooks = await Book.find()
-    response.json(allBooks);
-  }
-});
 
 //Show all books by genre
-app.get('/books/genre', async (req, res) => {
-  const { genre } = req.query
-  if (genre) {
-    const allBooks = await Book.find({ genre: genre })
-    res.json(allBooks)
-  } else {
-    const allBooks = await Book.find({
-      $or: [
-        { genre: /Fiction/ },
-        { genre: /Nonfiction/ },
-        { genre: /Mystery/ },
-        { genre: /Thriller/ },
-        { genre: /Horror/ }
-        //add more genres as you go??
-      ]
-    })
-    res.json(allBooks)
-  }
-})
+//http://localhost:8000/books/fiction
+app.get("/books/:genre", async (req, res) => {
+  const bookGenre = req.params.genre;
+  let filteredBooks = booksData;
+
+  if (bookGenre) {
+    filteredBooks = filteredBooks.filter((book) => {
+      let thisGenre = book.genre.toString().toLowerCase();
+      return thisGenre.includes(bookGenre);
+    });
+  } //handle response when genre not found??
+  res.json(filteredBooks);
+});
+
 
 //Show all bestsellers
-app.get('books/bestseller', async (req,res) => {
-  const { bestseller } = req.body
-    if (bestseller === "Yes") {
-      const allBooks = await Book.fin({bestseller: bestseller})
-      res.json(allBooks)
-    }
+//http://localhost:8000/books/bestseller/bestsellers
+app.get('/books/bestseller/:bestsellers', async (req,res) => {
+  const bestsellerBooks = req.params.bestsellers
+  let filteredBooks = booksData;
+
+    if (bestsellerBooks) {
+      filteredBooks = filteredBooks.filter((book) => {
+        let bookBestseller = book.bestseller.toString().toLocaleLowerCase()
+        return bookBestseller.includes(bestsellerBooks)
+      })
+      res.json(filteredBooks)
+    } 
 })
 
 //Show all new releases
-app.get('books/new_releases', async (req,res) => {
-  const { new_releases } = req.body
-    if (new_releases === "Yes") {
-      const allBooks = await Book.fin({new_releases: new_releases})
-      res.json(allBooks)
-    }
+app.get('/books/new_releases/:new_releases', async (req,res) => {
+  const newreleasesBooks = req.params.new_releases
+  let filteredBooks = booksData;
+
+    if (newreleasesBooks) {
+      filteredBooks = filteredBooks.filter((book) => {
+        let newlyreleased = book.new_releases.toString().toLocaleLowerCase()
+        return newlyreleased.includes(newreleasesBooks)
+      })
+      res.json(filteredBooks)
+    } 
 })
+
 
 // Start the server
 app.listen(port, () => {

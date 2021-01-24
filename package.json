@@ -19,7 +19,7 @@
     "express": "^4.17.1",
     "express-list-endpoints": "^5.0.0",
     "knex": "^0.21.16",
-    "mongoose": "^5.11.12",
+    "mongoose": "^5.11.13",
     "nodemon": "^2.0.2",
     "save": "^2.4.0"
   },

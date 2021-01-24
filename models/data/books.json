@@ -2,13 +2,13 @@
   {
     "bookID": 1,
     "title": "You Will Remember Me",
-    "authors": "Hannah Mary McKinnon ",
+    "authors": "Hannah Mary McKinnon",
     "average_rating": 4.5,
     "isbn13": 9780369701022,
     "bestseller": "No",
     "num_pages": 400,
     "genre": "Fiction",
-    "new_releases": "Yes",
+    "new_releases": "new_releases",
     "synopsis": "Lily Reid thinks she knows her boyfriend, Jack. Until he goes missing one night, and her frantic search reveals that he’s been lying to her since they met, desperate to escape a dark past he’d purposely left behind."
   },
   {
@@ -17,7 +17,7 @@
     "authors": "Delia Owens",
     "average_rating": 4.47,
     "isbn13": 9780735219113,
-    "bestseller": "Yes",
+    "bestseller": "bestsellers",
     "num_pages": 384,
     "genre": "Fiction",
     "new_releases": "No",
@@ -29,7 +29,7 @@
     "authors": "Kathryn Stockett",
     "average_rating": 4.46,
     "isbn13": 9781949127065,
-    "bestseller": "Yes",
+    "bestseller": "bestsellers",
     "num_pages": 451,
     "genre": "Fiction",
     "new_releases": "No",
@@ -41,7 +41,7 @@
     "authors": "Tara Westover",
     "average_rating": 4.46,
     "isbn13": 9780399590504,
-    "bestseller": "Yes",
+    "bestseller": "bestsellers",
     "num_pages": 334,
     "genre": "Nonfiction",
     "new_releases": "No",
@@ -56,7 +56,7 @@
     "bestseller": "No",
     "num_pages": 720,
     "genre": "Fiction",
-    "new_releases": "Yes",
+    "new_releases": "new_releases",
     "synopsis": "A girl comes of age against the knife. So begins the story of Betty Carpenter. Born in a bathtub in 1954 to a Cherokee father and white mother, Betty is the sixth of eight siblings. The world they inhabit is one of poverty and violence--both from outside the family, and also, devastatingly, from within."
   },
   {
@@ -80,7 +80,7 @@
     "bestseller": "No",
     "num_pages": 364,
     "genre": "Fiction",
-    "new_releases": "Yes",
+    "new_releases": "new_releases",
     "synopsis": "It’s 1965, and life has taken a turn for eighteen-year-old Anton Addison-Rice. Nearly a year after his brother died in a tragic accident, Anton is still wounded—physically and emotionally. Alone for the holidays, he catches a glimpse of his neighbor Edith across the street one evening and realizes that she’s in danger."
   },
 
@@ -118,7 +118,7 @@
     "bestseller": "No",
     "num_pages": 464,
     "genre": "Fiction",
-    "new_releases": "Yes",
+    "new_releases": "new_releases",
     "synopsis": "In a moment of crisis, Ellis Abbey leaves her daughter, Viola, unattended—for just a few minutes. But when she returns, Viola is gone. A breaking point in an already fractured marriage, Viola’s abduction causes Ellis to disappear as well—into grief, guilt, and addiction."
   },
   {
@@ -142,7 +142,7 @@
     "bestseller": "No",
     "num_pages": 394,
     "genre": "Fiction",
-    "new_releases": "Yes",
+    "new_releases": "new_releases",
     "synopsis": "Linus Baker leads a quiet, solitary life. At forty, he lives in a tiny house with a devious cat and his old records. As a Case Worker at the Department in Charge Of Magical Youth, he spends his days overseeing the well-being of children in government-sanctioned orphanages."
   },
   {
@@ -154,7 +154,7 @@
     "bestseller": "No",
     "num_pages": 288,
     "genre": "Fiction",
-    "new_releases": "Yes",
+    "new_releases": "new_releases",
     "synopsis": "Between life and death there is a library, and within that library, the shelves go on forever. Every book provides a chance to try another life you could have lived. To see how things would be if you had made other choices. Would you have done anything different, if you had the chance to undo your regrets?"
   },
   {
@@ -178,7 +178,7 @@
     "bestseller": "No",
     "num_pages": 357,
     "genre": "Fiction",
-    "new_releases": "Yes",
+    "new_releases": "new_releases",
     "synopsis": "Bart, Teddy and Cole have been best friends since childhood. Having founded their own small-town construction company, they yearn to build a legacy, something to leave behind to their families. So when Gretchen Connors, a mysterious millionaire lawyer from California, approaches them with a stunning, almost formidable project in the mountains above their town, the three friends convince themselves it's the job which will secure their future."
   },
   {
@@ -190,7 +190,7 @@
     "bestseller": "No",
     "num_pages": 208,
     "genre": "Fiction",
-    "new_releases": "Yes",
+    "new_releases": "new_releases",
     "synopsis": "A lyrical and heartfelt collection by an award-winning writer that connects the lives of young people from small towns in Alaska and the American west. Each story is unique, yet universal."
   },
   {
@@ -211,7 +211,7 @@
     "authors": "Andy Weir",
     "average_rating": 4.4,
     "isbn13": 9780804139021,
-    "bestseller": "Yes",
+    "bestseller": "bestsellers",
     "num_pages": 384,
     "genre": "Fiction",
     "new_releases": "No",
@@ -226,7 +226,7 @@
     "bestseller": "No",
     "num_pages": 384,
     "genre": "Fiction",
-    "new_releases": "Yes",
+    "new_releases": "new_releases",
     "synopsis": "Malibu: August 1983. It's the day of Nina Riva's annual end-of-summer party, and anticipation is at a fever pitch. Everyone wants to be around the famous Rivas: Nina, the talented surfer and supermodel; brothers Jay and Hud, one a championship surfer, the other a renowned photographer; and their adored baby sister, Kit."
   },
   {
@@ -235,7 +235,7 @@
     "authors": "Taylor Jenkins Reid",
     "average_rating": 4.37,
     "isbn13": 9781501139239,
-    "bestseller": "Yes",
+    "bestseller": "bestsellers",
     "num_pages": 391,
     "genre": "Fiction",
     "new_releases": "No",
@@ -247,10 +247,10 @@
     "authors": "Brit Bennett",
     "average_rating": 4.28,
     "isbn13": 9780525536291,
-    "bestseller": "Yes",
+    "bestseller": "bestsellers",
     "num_pages": 343,
     "genre": "Fiction",
-    "new_releases": "Yes",
+    "new_releases": "new_releases",
     "synopsis": "The Vignes twin sisters will always be identical. But after growing up together in a small, southern black community and running away at age sixteen, it's not just the shape of their daily lives that is different as adults, it's everything: their families, their communities, their racial identities."
   },
   {
@@ -262,7 +262,7 @@
     "bestseller": "No",
     "num_pages": 450,
     "genre": "Fiction",
-    "new_releases": "Yes",
+    "new_releases": "new_releases",
     "synopsis": "In the summer of 1932, on the banks of Minnesota's Gilead River, the Lincoln Indian Training School is a pitiless place where Native American children, forcibly separated from their parents, are sent to be educated. It is also home to Odie O’Banion, a lively orphan boy whose exploits constantly earn him the superintendent’s wrath."
   },
   {
@@ -283,7 +283,7 @@
     "authors": "James Clear",
     "average_rating": 4.35,
     "isbn13": 9780735211292,
-    "bestseller": "Yes",
+    "bestseller": "bestsellers",
     "num_pages": 319,
     "genre": "Noniction",
     "new_releases": "No",
@@ -298,7 +298,7 @@
     "bestseller": "No",
     "num_pages": 333,
     "genre": "Fiction",
-    "new_releases": "Yes",
+    "new_releases": "new_releases",
     "synopsis": "It’s been three years since Claire Kite lost her husband, David, an aspiring novelist, in a tragic car accident. Claire finally finds the courage to move on; then she discovers among the remnants of her shattered world her husband’s last manuscript. It’s intimate, stirring—and unfinished. An idea comes to her. What if she can find someone to give David’s novel the ending it deserves?"
   },
   {
@@ -307,7 +307,7 @@
     "authors": "Kristin Hannah",
     "average_rating": 4.38,
     "isbn13": 9780312577230,
-    "bestseller": "Yes",
+    "bestseller": "bestsellers",
     "num_pages": 440,
     "genre": "Fiction",
     "new_releases": "No",
@@ -319,7 +319,7 @@
     "authors": "Kristin Hannah",
     "average_rating": 4.09,
     "isbn13": 9780312364083,
-    "bestseller": "Yes",
+    "bestseller": "bestsellers",
     "num_pages": 479,
     "genre": "Fiction",
     "new_releases": "No",
@@ -334,7 +334,7 @@
     "bestseller": "No",
     "num_pages": 112,
     "genre": "Fiction",
-    "new_releases": "Yes",
+    "new_releases": "new_releases",
     "synopsis": "Elsie the vampire is three hundred years old, but in all that time, she has never met her match. This all changes one night in a bar when she meets Jimmy, a charming werewolf with a wry sense of humor and a fondness for running wild during the full moon. Together they enjoy horror films and scary novels, shady strolls, fine dining (though never with garlic), and a genuine fondness for each other’s unusual habits, macabre lifestyles, and monstrous appetites."
   },
   {
@@ -343,7 +343,7 @@
     "authors": "Fredrik Backman",
     "average_rating": 4.25,
     "isbn13": 9781501160769,
-    "bestseller": "Yes",
+    "bestseller": "bestsellers",
     "num_pages": 432,
     "genre": "Fiction",
     "new_releases": "No",
@@ -355,7 +355,7 @@
     "authors": "Fredrik Backman",
     "average_rating": 4.34,
     "isbn13": 9781501160790,
-    "bestseller": "Yes",
+    "bestseller": "bestsellers",
     "num_pages": 448,
     "genre": "Fiction",
     "new_releases": "No",
@@ -370,7 +370,7 @@
     "bestseller": "No",
     "num_pages": 496,
     "genre": "Fiction",
-    "new_releases": "Yes",
+    "new_releases": "new_releases",
     "synopsis": "As a massive storm batters the Scottish coast, Gordon Smith’s home is falling into the North Sea. But the crumbling headland has revealed what he’s got buried in his garden: human remains. With the storm still raging, it’s too dangerous to retrieve the bodies and waves are devouring the evidence. Which means no one knows how many people Smith’s already killed and how many more he’ll kill if he can’t be found and stopped."
   },
   {
@@ -379,7 +379,7 @@
     "authors": "Anthony Doerr",
     "average_rating": 4.33,
     "isbn13": 9781476746586,
-    "bestseller": "Yes",
+    "bestseller": "bestsellers",
     "num_pages": 531,
     "genre": "Fiction",
     "new_releases": "No",
@@ -391,10 +391,10 @@
     "authors": "American Dirt",
     "average_rating": 4.32,
     "isbn13": 9781250209764,
-    "bestseller": "Yes",
+    "bestseller": "bestsellers",
     "num_pages": 400,
     "genre": "Fiction",
-    "new_releases": "Yes",
+    "new_releases": "new_releases",
     "synopsis": "Lydia Quixano Pérez lives in the Mexican city of Acapulco. She runs a bookstore. She has a son, Luca, the love of her life, and a wonderful husband who is a journalist. And while there are cracks beginning to show in Acapulco because of the drug cartels, her life is, by and large, fairly comfortable. Even though she knows they’ll never sell, Lydia stocks some of her all-time favorite books in her store. And then one day a man enters the shop to browse and comes up to the register with a few books he would like to buy—two of them her favorites. Javier is erudite. He is charming. And, unbeknownst to Lydia, he is the jefe of the newest drug cartel that has gruesomely taken over the city. When Lydia’s husband’s tell-all profile of Javier is published, none of their lives will ever be the same."
   },
   {
@@ -403,7 +403,7 @@
     "authors": "Colleen Hoover",
     "average_rating": 4.33,
     "isbn13": 9781791392796,
-    "bestseller": "Yes",
+    "bestseller": "bestsellers",
     "num_pages": 324,
     "genre": "Fiction",
     "new_releases": "No",
@@ -451,7 +451,7 @@
     "authors": "Anthony Doerr",
     "average_rating": 4.33,
     "isbn13": 9781476746586,
-    "bestseller": "Yes",
+    "bestseller": "bestsellers",
     "num_pages": 531,
     "genre": "Fiction",
     "new_releases": "No",
@@ -463,7 +463,7 @@
     "authors": "Hanya Yanagihara",
     "average_rating": 4.31,
     "isbn13": 9780385539258,
-    "bestseller": "Yes",
+    "bestseller": "bestsellers",
     "num_pages": 720,
     "genre": "Fiction",
     "new_releases": "No",
@@ -475,7 +475,7 @@
     "authors": "Stephen King",
     "average_rating": 4.3,
     "isbn13": 9781451627282,
-    "bestseller": "Yes",
+    "bestseller": "bestsellers",
     "num_pages": 859,
     "genre": "Fiction",
     "new_releases": "No",
@@ -487,7 +487,7 @@
     "authors": "Stephen King",
     "average_rating": 4.17,
     "isbn13": 9780450417399,
-    "bestseller": "Yes",
+    "bestseller": "bestsellers",
     "num_pages": 370,
     "genre": "Fiction",
     "new_releases": "No",
@@ -499,7 +499,7 @@
     "authors": "Stephen King",
     "average_rating": 4.23,
     "isbn13": 9780450040184,
-    "bestseller": "Yes",
+    "bestseller": "bestsellers",
     "num_pages": 659,
     "genre": "Fiction",
     "new_releases": "No",
@@ -511,7 +511,7 @@
     "authors": "Stephen King",
     "average_rating": 4.0,
     "isbn13": 9781416524342,
-    "bestseller": "Yes",
+    "bestseller": "bestsellers",
     "num_pages": 580,
     "genre": "Fiction",
     "new_releases": "No",
@@ -559,7 +559,7 @@
     "authors": "Harper Lee",
     "average_rating": 4.28,
     "isbn13": 9781439550410,
-    "bestseller": "Yes",
+    "bestseller": "bestsellers",
     "num_pages": 324,
     "genre": "Classics",
     "new_releases": "No",
@@ -571,7 +571,7 @@
     "authors": "George Orwell",
     "average_rating": 4.19,
     "isbn13": 9780141036144,
-    "bestseller": "Yes",
+    "bestseller": "bestsellers",
     "num_pages": 237,
     "genre": "Classics",
     "new_releases": "No",
@@ -583,7 +583,7 @@
     "authors": "J.D. Salinger",
     "average_rating": 3.81,
     "isbn13": 9780316769174,
-    "bestseller": "Yes",
+    "bestseller": "bestsellers",
     "num_pages": 277,
     "genre": "Classics",
     "new_releases": "No",
@@ -595,7 +595,7 @@
     "authors": "William Golding",
     "average_rating": 3.69,
     "isbn13": 9780140283334,
-    "bestseller": "Yes",
+    "bestseller": "bestsellers",
     "num_pages": 182,
     "genre": "Classics",
     "new_releases": "No",
@@ -646,7 +646,7 @@
     "bestseller": "No",
     "num_pages": 314,
     "genre": "Fiction",
-    "new_releases": "Yes",
+    "new_releases": "new_releases",
     "synopsis": "For twenty-six years Liz has perfectly played the part of Mrs. Thomas Lightsey, exemplary pastor’s wife and mother. But maintaining appearances for the congregation and catering to her demanding husband takes a toll, and she’s lost herself in meeting the expectations of others. When Thomas suddenly dies, Liz feels shock, grief, and, to her surprise, the siren song of freedom. Dare she dream of a life to call her own?"
   },
   {
@@ -682,7 +682,7 @@
     "bestseller": "No",
     "num_pages": 368,
     "genre": "Fiction",
-    "new_releases": "Yes",
+    "new_releases": "new_releases",
     "synopsis": "Emma loves her life. She’s the mother of a precocious kindergartener, married to her soulmate—a loyal and loving police detective—and has a rewarding career as a doctor at the local hospital. But everything comes crashing down when her son, Josh, is diagnosed with a rare form of cancer. Determined to save him, Emma makes the risky decision to sell opioids to fund the life-saving treatment he needs. But when somebody ends up dead, a lethal game of cat and mouse ensues, her own husband leading the chase. With her son’s life hanging in the balance, Emma is dragged into the dark world of drugs, lies, and murder. Will the truth catch up to her before she can save Josh?."
   },
   {
@@ -706,7 +706,7 @@
     "bestseller": "No",
     "num_pages": 256,
     "genre": "Fiction",
-    "new_releases": "Yes",
+    "new_releases": "new_releases",
     "synopsis": "Franny Stone has always been the kind of woman who is able to love but unable to stay. Leaving behind everything but her research gear, she arrives in Greenland with a singular purpose: to follow the last Arctic terns in the world on what might be their final migration to Antarctica. Franny talks her way onto a fishing boat, and she and the crew set sail, traveling ever further from shore and safety. But as Franny’s history begins to unspool—a passionate love affair, an absent family, a devastating crime—it becomes clear that she is chasing more than just the birds. When Franny's dark secrets catch up with her, how much is she willing to risk for one more chance at redemption?"
   },
   {
@@ -718,7 +718,7 @@
     "bestseller": "No",
     "num_pages": 400,
     "genre": "Fiction",
-    "new_releases": "Yes",
+    "new_releases": "new_releases",
     "synopsis": "Isaiah was Samuel’s and Samuel was Isaiah’s. That was the way it was since the beginning, and the way it was to be until the end. In the barn they tended to the animals, but also to each other, transforming the hollowed-out shed into a place of human refuge, a source of intimacy and hope in a world ruled by vicious masters. But when an older man—a fellow slave—seeks to gain favor by preaching the master’s gospel on the plantation, the enslaved begin to turn on their own. Isaiah and Samuel’s love, which was once so simple, is seen as sinful and a clear danger to the plantation’s harmony."
   },
   {
