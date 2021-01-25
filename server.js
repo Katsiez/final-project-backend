@@ -7,8 +7,8 @@ import bcrypt from "bcrypt";
 import endpoints from "express-list-endpoints";
 
 import User from "./models/user";
-// import Book from "./models/book";
-import Bag from "./models/bag";
+import {Book} from "./models/book";
+import {Bag} from "./models/bag";
 import booksData from "./models/data/books.json";
 
 //error messages from the server
@@ -25,40 +25,6 @@ mongoose.connect(mongoUrl, {
 });
 mongoose.Promise = Promise;
 mongoose.set("useCreateIndex", true);
-
-//books model that for now lives here
-const Book = mongoose.model("Book", {
-  bookID: {
-    type: Number
-  },
-  title: {
-    type: String
-  },
-  authors: {
-    type: String
-  },
-  average_rating: {
-    type: Number
-  },
-  isbn13: {
-    type: Number
-  },
-  bestseller: {
-    type: String
-  },
-  num_pages: {
-    type: Number
-  },
-  genre: {
-    type: String
-  },
-  new_releases: {
-    type: String
-  },
-  synopsis: {
-    type: String
-  }
-});
 
 //* USER AUTHENTICATION *//
 const authenticateUser = async (req, res, next) => {

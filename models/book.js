@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import booksData from "./data/books.json";
 
- const Book = mongoose.model("Book", {
+ export const Book = mongoose.model("Book", {
   bookID: {
     type: Number
   },
