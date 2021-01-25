@@ -147,7 +147,7 @@ app.get("/users/:id/verified", async (req, res) => {
   };
   seedDatabase();
 // }
-app.get("/shop/books", async (req, res) => {
+app.get("/books", async (req, res) => {
   const allBooks = await Book.find();
   res.json(allBooks);
 });
