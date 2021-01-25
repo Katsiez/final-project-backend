@@ -198,6 +198,18 @@ app.get("/books/new_releases/:new_releases", async (req,res) => {
     } 
 })
 
+
+// Show a single book by ID: /books/book/7
+app.get('/books/book/:bookID', (req, res) => {
+  const bookID = req.params.bookID;
+  const singleBook = booksData.find((item) => item.bookID === +bookID);
+
+  if (!singleBook) {
+    res.status(404).json("Sorry, could not find books with that ID :(")
+  };
+  
+  res.json(singleBook);
+});
 //***BAG MODEL***//
 //Add books to shopping bag
 app.post("/bag", async (req, res) => {
