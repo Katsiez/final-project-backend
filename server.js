@@ -14,8 +14,7 @@ import booksData from "./models/data/books.json";
 //error messages from the server
 const error_CANNOT_LOGIN = "Please try logging in again";
 const error_CANNOT_ACCESS = "Access token is incorrect or missing";
-const error_CANNOT_CREATE_USER =
-  "error while creating the user, please try again";
+const error_CANNOT_CREATE_USER = "error while creating the user, please try again";
 
 const mongoUrl =
   process.env.MONGO_URL || "mongodb://localhost/finalProjectBackend";
@@ -146,10 +145,45 @@ app.get("/users/:id/verified", async (req, res) => {
     });
   };
   seedDatabase();
-// }
-app.get("/books", async (req, res) => {
-  const allBooks = await Book.find();
-  res.json(allBooks);
+//}
+
+//Show all books
+
+  app.get('/books', async (request, response) => {
+    const allBooks = await Book.find();
+    response.json(allBooks);
+  });
+
+// app.get("/books", async (req, res) => {
+//   const booksCount = booksData.length
+//   const perPage = 30
+//   const pageCount = Math.ceil(booksCount / perPage)
+
+//   let page = parseInt(req.query.p)
+//   if (page <1) page = 1
+//   if (page > pageCount) page = pageCount
+
+//   const from = perPage * (page-1)
+//   let to = page * perPage
+//   if(to<0) to = 0 
+
+//   res.json({
+//     books: booksData.slice(from, to),
+//     page,
+//     pageCount
+//   })
+// });
+
+// Show a single book based on the ID - example path: books/1
+app.get('/books/book/:bookID', (req, res) => {
+  const bookID = req.params.bookID;
+  const singleBook = booksData.find((item) => item.bookID === +bookID);
+
+  if (!singleBook) {
+    res.status(404).json("Sorry, could not find books with that ID :(")
+  };
+  
+  res.json(singleBook);
 });
 
 
@@ -198,18 +232,6 @@ app.get("/books/new_releases/:new_releases", async (req,res) => {
     } 
 })
 
-
-// Show a single book by ID: /books/book/7
-app.get('/books/book/:bookID', (req, res) => {
-  const bookID = req.params.bookID;
-  const singleBook = booksData.find((item) => item.bookID === +bookID);
-
-  if (!singleBook) {
-    res.status(404).json("Sorry, could not find books with that ID :(")
-  };
-  
-  res.json(singleBook);
-});
 //***BAG MODEL***//
 //Add books to shopping bag
 app.post("/bag", async (req, res) => {
