@@ -13,6 +13,7 @@ import User from "./models/user";
 import { Book } from "./models/book";
 import { Bag } from "./models/bag";
 import booksData from "./models/data/books.json";
+import bestsellersData from "./models/data/bestsellers.json";
 
 //Cloudinary image storage
 dotenv.config();
@@ -253,13 +254,14 @@ app.get("/books/:genre", async (req, res) => {
 //http://localhost:8000/books/bestseller/bestseller
 app.get("/books/bestseller/:bestseller", async (req, res) => {
   const bestsellerBooks = req.params.bestseller;
-  let filteredBooks = booksData;
-  if (bestsellerBooks === "bestseller") {
-    filteredBooks = filteredBooks.filter((book) => {
+  let filteredBestsellers = bestsellersData;
+
+  if (bestsellerBooks) {
+    filteredBestsellers = filteredBestsellers.filter((book) => {
       let bookBestseller = book.bestseller.toString().toLocaleLowerCase();
       return bookBestseller.includes(bestsellerBooks);
     });
-    res.json(filteredBooks);
+    res.json(filteredBestsellers);
   }
 });
 

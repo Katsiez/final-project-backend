@@ -31,7 +31,7 @@ import mongoose from "mongoose";
   synopsis: {
     type: String
   },
-  img_url: {
+  imageUrl: {
     type: String
   }
 });
