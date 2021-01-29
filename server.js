@@ -186,7 +186,9 @@ app.get("/books", async (req, res) => {
 //Add book images for each bbook
 app.post("/books/:id/image", parser.single("image"), async (req, res) => {
   const { id } = req.params;
-  const { path, filename } = req.file.path;
+  const { path } = req.file;
+  const { filename } = req.file;
+
 
   console.log(`POST /books/${id}/image`);
   try {
