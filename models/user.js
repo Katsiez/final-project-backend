@@ -1,17 +1,17 @@
 import mongoose from "mongoose";
 import crypto from "crypto";
 
-const userSchema = new mongoose.Schema({
+export const userSchema = new mongoose.Schema({
 	firstName: {
 	  type: String,
-	  minlength: 5,
+	  minlength: 3,
 	  maxlength: 20,
 	  unique: true,
 	  required: [true, 'First name is missing'],
 	},
 	lastName: {
 	  type: String,
-	  minlength: 5,
+	  minlength: 3,
 	  maxlength: 20,
 	  unique: true,
 	  required: [true, 'Last name is missing'],
@@ -24,12 +24,13 @@ const userSchema = new mongoose.Schema({
 	password: {
 	  type: String,
 	  minlength: [6, 'Password is missing'],
+	  maxlength: [10, 'Password is too long'],
 	  required: true,
 	},
 	accessToken: {
 	  type: String,
 	  default: () => crypto.randomBytes(128).toString("hex"),
+	  unique: true
 	},
   });
 
-  const User = mongoose.model("User", userSchema);

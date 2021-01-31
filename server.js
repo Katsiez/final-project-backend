@@ -9,7 +9,7 @@ import cloudinaryFramework from "cloudinary";
 import multer from "multer";
 import cloudinaryStorage from "multer-storage-cloudinary";
 
-import User from "./models/user";
+//import { User } from "./models/user";
 import { Book } from "./models/book";
 import { Bag } from "./models/bag";
 import booksData from "./models/data/books.json";
@@ -18,6 +18,7 @@ import bestsellersData from "./models/data/bestsellers.json";
 //Cloudinary image storage
 dotenv.config();
 
+/////////////////////////////////////////////
 //Set up Cloudinary
 const cloudinary = cloudinaryFramework.v2;
 cloudinary.config({
@@ -35,12 +36,16 @@ const storage = cloudinaryStorage({
   },
 });
 const parser = multer({ storage });
+/////////////////////////////////////////////
 
+/////////////////////////////////////////////////////
 //error messages from the server
 const error_CANNOT_LOGIN = "Please try logging in again";
 const error_CANNOT_ACCESS = "Access token is incorrect or missing";
-const ERR_CANNOT_CREATE_USER = "Error while creating the user, please try again";
+const ERR_CANNOT_CREATE_USER =
+  "Error while creating the user, please try again";
 const ERR_CANNOT_ADD_IMAGE = "Cannot load the image";
+////////////////////////////////////////////////////////
 
 const mongoUrl =
   process.env.MONGO_URL || "mongodb://localhost/finalProjectBackend";
@@ -55,25 +60,40 @@ const bookImage = mongoose.model("bookImage", {
   name: String,
   imageUrl: String,
 });
+//***USER MODEL***//
+const userSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    minlength: 3,
+    maxlength: 20,
+    unique: true,
+    required: true,
+  },
+  password: {
+    type: String,
+    minlength: 6,
+    maxlength: 10,
+    required: true,
+  },
+  accessToken: {
+    type: String,
+    default: () => crypto.randomBytes(128).toString("hex"),
+    unique: true,
+  },
+});
 
-//* USER AUTHENTICATION *//
-const authenticateUser = async (req, res, next) => {
-  try {
-    const user = await User.findOne({
-      accessToken: req.header("Authorization"),
-    });
-    if (user) {
-      req.user = user;
-      next();
-    } else {
-      res.status(401).json({ loggedOut: true, message: error_CANNOT_LOGIN });
-    }
-  } catch (error) {
-    res
-      .status(403)
-      .json({ message: error_CANNOT_ACCESS, errors: error.errors });
+userSchema.pre("save", async function (next) {
+  const user = this;
+  if (!user.isModified("password")) {
+    return next();
   }
-};
+  const salt = bcrypt.genSaltSync(10);
+  user.password = bcrypt.hashSync(user.password, salt);
+  next();
+});
+
+const User = mongoose.model("User", userSchema);
+
 //   PORT=8000 npm start
 const port = process.env.PORT || 8000;
 const app = express();
@@ -82,86 +102,71 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
+//* USER AUTHENTICATION *//
+const authenticateUser = async (req, res, next) => {
+  try {
+    const user = await User.findOne({
+      accessToken: req.header("Authorization"),
+    });
+
+    if (user) {
+      req.user = user;
+      next();
+    } else {
+      res.status(401).json({ loggedOut: true, message: "Please log in again" });
+    }
+  } catch (err) {
+    res
+      .status(403)
+      .json({ message: "Access token is missing or wrong", errors: err });
+  }
+};
+
 // Lising all endpoints
 app.get("/", (req, res) => {
   res.send(endpoints(app));
 });
 
-//***USER MODEL***//
-
-//Login
-app.post("/login", async (req, res) => {
-  try {
-    const { email, password } = req.body;
-    const user = await User.findOne({
-      email,
-    });
-    console.log(user);
-    if (user && bcrypt.compareSync(password, user.password)) {
-      res.status(201).json({
-        userId: user._id,
-        accessToken: user.accessToken,
-        name: user.name,
-        email: user.email,
-        password: user.password,
-      });
-    } else {
-      res.status(404).json({
-        notFound: true,
-        message: "Incorrect username and/or password",
-      });
-    }
-  } catch (error) {
-    res.status(404).json({
-      notFound: true,
-      message: "Incorrect username and/or password",
-    });
-  }
-});
-
 //Sign-up
 app.post("/signup", async (req, res) => {
   try {
-    const { firstName, lastName, email, password } = req.body;
-    console.log("!!!", firstName, lastName, email, password);
-    const user = new User({
-      firstName,
-      lastName,
-      email,
-      password: bcrypt.hashSync(password),
-    });
-    const userCreated = await user.save();
+    const { name, password } = req.body;
+    const user = await new User({ name, password }).save();
 
-    res.status(201).json({
-      message: "Account created!",
-      userId: userCreated._id,
-      accessToken: userCreated.accessToken,
-      firstName: userCreated.firstName,
-      lastName: userCreated.lastName,
-      email: userCreated.email,
-      password: userCreated.password,
-    });
+    res.status(201).json({ userId: user._id, accessToken: user.accessToken });
   } catch (error) {
-    res.status(400).json({
-      message: error_CANNOT_CREATE_USER,
-      errors: error.errors,
-    });
+    res.status(400).json({ message: "Could not create user", error });
   }
 });
 
 //User specific info, secret page only available after log in, found in "userprofile"
-app.get("/users/:id/verified", authenticateUser);
-app.get("/users/:id/verified", async (req, res) => {
-  const user = await User.findById(req.params.id);
-  if (user) {
-    res.status(201).json({
-      userId: userCreated._id,
-      firstName: userCreated.firstName,
-      lastName: userCreated.lastName,
-      email: userCreated.email,
-    });
-  } else {
-    res.status(400).json({ message: "Access denied" });
+app.get("/signup/:id/verified", authenticateUser);
+app.get("/signup/:id/verified", (req, res) => {
+  const secretMessage = `Hello ${req.user.name}, welcome onboard`;
+  res.status(201).json({ secretMessage });
+});
+
+
+//Login
+app.post("/login", async (req, res) => {
+  try {
+    const { name, password } = req.body;
+    const user = await User.findOne({ name });
+    console.log(user);
+    if (user && bcrypt.compareSync(password, user.password)) {
+      res.status(201).json({ userId: user._id, accessToken: user.accessToken });
+    } else {
+      res
+        .status(404)
+        .json({
+          notFound: true,
+          message: "Please verify username and password",
+        });
+    }
+  } catch (err) {
+    res
+      .status(404)
+      .json({ notFound: true, message: "Please verify username and password" });
   }
 });
 
@@ -189,7 +194,6 @@ app.post("/books/:id/image", parser.single("image"), async (req, res) => {
   const { id } = req.params;
   const { path } = req.file;
   const { filename } = req.file;
-
 
   console.log(`POST /books/${id}/image`);
   try {
@@ -302,12 +306,10 @@ app.post("/bag", async (req, res) => {
       .status(201)
       .json({ message: "Book added to your bag", item: newBagItem });
   } catch (err) {
-    res
-      .status(400)
-      .json({
-        message: "Something went wrong. Try adding that book in again!",
-        errors: err,
-      });
+    res.status(400).json({
+      message: "Something went wrong. Try adding that book in again!",
+      errors: err,
+    });
   }
 });
 
@@ -328,20 +330,16 @@ app.put("/bag/:id/add", async (req, res) => {
         { id: id },
         { $inc: { quantity: -1 } }
       );
-      res
-        .status(201)
-        .json({
-          message: `Updated shopping bag with with book id:${id}`,
-          item: updatedBagItem,
-        });
+      res.status(201).json({
+        message: `Updated shopping bag with with book id:${id}`,
+        item: updatedBagItem,
+      });
     }
   } catch (err) {
-    res
-      .status(400)
-      .json({
-        message: `Could not update shopping bag with book id:${id}`,
-        errors: err,
-      });
+    res.status(400).json({
+      message: `Could not update shopping bag with book id:${id}`,
+      errors: err,
+    });
   }
 });
 
@@ -349,12 +347,10 @@ app.put("/bag/:id/add", async (req, res) => {
 app.delete("/bag/:id/remove", async (req, res) => {
   const { id } = req.params;
   const removeBook = await Bag.deleteOne({ id: id });
-  res
-    .status(201)
-    .json({
-      message: `Book with id:${id} deleted from shopping bag`,
-      item: removeBook,
-    });
+  res.status(201).json({
+    message: `Book with id:${id} deleted from shopping bag`,
+    item: removeBook,
+  });
 });
 
 //Remove all books from shopping bag, clear all
@@ -368,12 +364,10 @@ app.delete("/bag", async (req, res) => {
 //Find books added to shopping bag
 app.get("/bag", async (req, res) => {
   const bagItems = await Bag.find();
-  res
-    .status(201)
-    .json({
-      message: "Found some books in your shopping bag!",
-      bagItems: bagItems,
-    });
+  res.status(201).json({
+    message: "Found some books in your shopping bag!",
+    bagItems: bagItems,
+  });
 });
 
 // Start the server
