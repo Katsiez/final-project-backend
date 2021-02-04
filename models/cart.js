@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-export const Bag = mongoose.model('bag', {
+export const Cart = mongoose.model('cart', {
 	//image??
 	title: {
 		type: String

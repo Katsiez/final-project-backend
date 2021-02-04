@@ -9,7 +9,8 @@
     "num_pages": 400,
     "genre": "Fiction",
     "new_releases": "new_releases",
-    "synopsis": "Lily Reid thinks she knows her boyfriend, Jack. Until he goes missing one night, and her frantic search reveals that he’s been lying to her since they met, desperate to escape a dark past he’d purposely left behind."
+    "synopsis": "Lily Reid thinks she knows her boyfriend, Jack. Until he goes missing one night, and her frantic search reveals that he’s been lying to her since they met, desperate to escape a dark past he’d purposely left behind.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612198843/you_hn1twp.jpg"
   },
   {
     "bookID": 2,
@@ -21,7 +22,9 @@
     "num_pages": 384,
     "genre": "Fiction",
     "new_releases": "No",
-    "synopsis": "For years, rumors of the “Marsh Girl” haunted Barkley Cove, a quiet fishing village. Kya Clark is barefoot and wild; unfit for polite society. So in late 1969, when the popular Chase Andrews is found dead, locals immediately suspect her."
+    "synopsis": "For years, rumors of the “Marsh Girl” haunted Barkley Cove, a quiet fishing village. Kya Clark is barefoot and wild; unfit for polite society. So in late 1969, when the popular Chase Andrews is found dead, locals immediately suspect her.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612184139/2_jremed.jpg"
+
   },
   {
     "bookID": 3,
@@ -33,7 +36,8 @@
     "num_pages": 451,
     "genre": "Fiction",
     "new_releases": "No",
-    "synopsis": "Twenty-two-year-old Skeeter has just returned home after graduating from Ole Miss. She may have a degree, but it is 1962, Mississippi, and her mother will not be happy till Skeeter has a ring on her finger. Skeeter would normally find solace with her beloved maid Constantine, the woman who raised her, but Constantine has disappeared and no one will tell Skeeter where she has gone."
+    "synopsis": "Twenty-two-year-old Skeeter has just returned home after graduating from Ole Miss. She may have a degree, but it is 1962, Mississippi, and her mother will not be happy till Skeeter has a ring on her finger. Skeeter would normally find solace with her beloved maid Constantine, the woman who raised her, but Constantine has disappeared and no one will tell Skeeter where she has gone.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612184138/3_t2p8vk.png"
   },
   {
     "bookID": 4,
@@ -45,7 +49,8 @@
     "num_pages": 334,
     "genre": "Nonfiction",
     "new_releases": "No",
-    "synopsis": "Tara Westover was 17 the first time she set foot in a classroom. Born to survivalists in the mountains of Idaho, she prepared for the end of the world by stockpiling home-canned peaches and sleeping with her head-for-the-hills bag. In the summer she stewed herbs for her mother, a midwife and healer, and in the winter she salvaged in her father's junkyard."
+    "synopsis": "Tara Westover was 17 the first time she set foot in a classroom. Born to survivalists in the mountains of Idaho, she prepared for the end of the world by stockpiling home-canned peaches and sleeping with her head-for-the-hills bag. In the summer she stewed herbs for her mother, a midwife and healer, and in the winter she salvaged in her father's junkyard.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612184138/4_jrg4t2.png"
   },
   {
     "bookID": 5,
@@ -57,11 +62,12 @@
     "num_pages": 720,
     "genre": "Fiction",
     "new_releases": "new_releases",
-    "synopsis": "A girl comes of age against the knife. So begins the story of Betty Carpenter. Born in a bathtub in 1954 to a Cherokee father and white mother, Betty is the sixth of eight siblings. The world they inhabit is one of poverty and violence--both from outside the family, and also, devastatingly, from within."
+    "synopsis": "A girl comes of age against the knife. So begins the story of Betty Carpenter. Born in a bathtub in 1954 to a Cherokee father and white mother, Betty is the sixth of eight siblings. The world they inhabit is one of poverty and violence--both from outside the family, and also, devastatingly, from within.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612184138/5_j38tc6.jpg"
   },
   {
     "bookID": 6,
-    "title": "Say Nothing: A True Story of Murder and Memory in Northern Ireland",
+    "title": "Say Nothing",
     "authors": "Mark Savage",
     "average_rating": 4.42,
     "isbn13": 9780385521314,
@@ -69,7 +75,8 @@
     "num_pages": 519,
     "genre": "Nonfiction",
     "new_releases": "No",
-    "synopsis": "In December 1972, Jean McConville, a thirty-eight-year-old mother of ten, was dragged from her Belfast home by masked intruders, her children clinging to her legs. They never saw her again. Her abduction was one of the most notorious episodes of the vicious conflict known as The Troubles. Everyone in the neighborhood knew the I.R.A. was responsible. But in a climate of fear and paranoia, no one would speak of it."
+    "synopsis": "In December 1972, Jean McConville, a thirty-eight-year-old mother of ten, was dragged from her Belfast home by masked intruders, her children clinging to her legs. They never saw her again. Her abduction was one of the most notorious episodes of the vicious conflict known as The Troubles. Everyone in the neighborhood knew the I.R.A. was responsible. But in a climate of fear and paranoia, no one would speak of it.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612184138/6_ewondi.png"
   },
   {
     "bookID": 7,
@@ -81,7 +88,8 @@
     "num_pages": 364,
     "genre": "Fiction",
     "new_releases": "new_releases",
-    "synopsis": "It’s 1965, and life has taken a turn for eighteen-year-old Anton Addison-Rice. Nearly a year after his brother died in a tragic accident, Anton is still wounded—physically and emotionally. Alone for the holidays, he catches a glimpse of his neighbor Edith across the street one evening and realizes that she’s in danger."
+    "synopsis": "It’s 1965, and life has taken a turn for eighteen-year-old Anton Addison-Rice. Nearly a year after his brother died in a tragic accident, Anton is still wounded—physically and emotionally. Alone for the holidays, he catches a glimpse of his neighbor Edith across the street one evening and realizes that she’s in danger.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612184138/7_tjdumn.png"
   },
 
   {
@@ -94,7 +102,8 @@
     "num_pages": 304,
     "genre": "Fiction",
     "new_releases": "No",
-    "synopsis": "In Fictional Film Club, our narrator attempts to review a series of movies that don't exist. From here, he slips into an ever more obsessive and self-obsessive unreality of made-up movie stars, false features, and perverse productions. "
+    "synopsis": "In Fictional Film Club, our narrator attempts to review a series of movies that don't exist. From here, he slips into an ever more obsessive and self-obsessive unreality of made-up movie stars, false features, and perverse productions. ",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612184138/8_d3zbl9.png"
   },
 
   {
@@ -107,7 +116,9 @@
     "num_pages": 357,
     "genre": "Nonfiction",
     "new_releases": "No",
-    "synopsis": "She was known to the world as Emily Doe when she stunned millions with a letter. Brock Turner had been sentenced to just six months in county jail after he was found sexually assaulting her on Stanford’s campus. Her victim impact statement was posted on BuzzFeed, where it instantly went viral–viewed by eleven million people within four days, it was translated globally and read on the floor of Congress; it inspired changes in California law and the recall of the judge in the case."
+    "synopsis": "She was known to the world as Emily Doe when she stunned millions with a letter. Brock Turner had been sentenced to just six months in county jail after he was found sexually assaulting her on Stanford’s campus. Her victim impact statement was posted on BuzzFeed, where it instantly went viral–viewed by eleven million people within four days, it was translated globally and read on the floor of Congress; it inspired changes in California law and the recall of the judge in the case.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612184137/9_ckljml.png"
+
   },
   {
     "bookID": 10,
@@ -119,7 +130,8 @@
     "num_pages": 464,
     "genre": "Fiction",
     "new_releases": "new_releases",
-    "synopsis": "In a moment of crisis, Ellis Abbey leaves her daughter, Viola, unattended—for just a few minutes. But when she returns, Viola is gone. A breaking point in an already fractured marriage, Viola’s abduction causes Ellis to disappear as well—into grief, guilt, and addiction."
+    "synopsis": "In a moment of crisis, Ellis Abbey leaves her daughter, Viola, unattended—for just a few minutes. But when she returns, Viola is gone. A breaking point in an already fractured marriage, Viola’s abduction causes Ellis to disappear as well—into grief, guilt, and addiction.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612184137/10_nx66ab.jpg"
   },
   {
     "bookID": 11,
@@ -131,7 +143,8 @@
     "num_pages": 332,
     "genre": "Fiction",
     "new_releases": "No",
-    "synopsis": "After the loss of her mother and her own battle with breast cancer, Joanna Teale returns to her graduate research on nesting birds in rural Illinois, determined to prove that her recent hardships have not broken her. She throws herself into her work from dusk to dawn, until her solitary routine is disrupted by the appearance of a mysterious child who shows up at her cabin barefoot and covered in bruises."
+    "synopsis": "After the loss of her mother and her own battle with breast cancer, Joanna Teale returns to her graduate research on nesting birds in rural Illinois, determined to prove that her recent hardships have not broken her. She throws herself into her work from dusk to dawn, until her solitary routine is disrupted by the appearance of a mysterious child who shows up at her cabin barefoot and covered in bruises.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612184137/11_i1sy0x.jpg"
   },
   {
     "bookID": 12,
@@ -143,7 +156,8 @@
     "num_pages": 394,
     "genre": "Fiction",
     "new_releases": "new_releases",
-    "synopsis": "Linus Baker leads a quiet, solitary life. At forty, he lives in a tiny house with a devious cat and his old records. As a Case Worker at the Department in Charge Of Magical Youth, he spends his days overseeing the well-being of children in government-sanctioned orphanages."
+    "synopsis": "Linus Baker leads a quiet, solitary life. At forty, he lives in a tiny house with a devious cat and his old records. As a Case Worker at the Department in Charge Of Magical Youth, he spends his days overseeing the well-being of children in government-sanctioned orphanages.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612184137/12_bjengm.jpg"
   },
   {
     "bookID": 13,
@@ -155,7 +169,9 @@
     "num_pages": 288,
     "genre": "Fiction",
     "new_releases": "new_releases",
-    "synopsis": "Between life and death there is a library, and within that library, the shelves go on forever. Every book provides a chance to try another life you could have lived. To see how things would be if you had made other choices. Would you have done anything different, if you had the chance to undo your regrets?"
+    "synopsis": "Between life and death there is a library, and within that library, the shelves go on forever. Every book provides a chance to try another life you could have lived. To see how things would be if you had made other choices. Would you have done anything different, if you had the chance to undo your regrets?",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612184137/13_nqegzt.jpg"
+
   },
   {
     "bookID": 14,
@@ -167,7 +183,8 @@
     "num_pages": 251,
     "genre": "Nonfiction",
     "new_releases": "No",
-    "synopsis": "For years Carmen Maria Machado has struggled to articulate her experiences in an abusive same-sex relationship. In this extraordinarily candid and radically inventive memoir, Machado tackles a dark and difficult subject with wit, inventiveness and an inquiring spirit, as she uses a series of narrative tropes—including classic horror themes—to create an entirely unique piece of work which is destined to become an instant classic."
+    "synopsis": "For years Carmen Maria Machado has struggled to articulate her experiences in an abusive same-sex relationship. In this extraordinarily candid and radically inventive memoir, Machado tackles a dark and difficult subject with wit, inventiveness and an inquiring spirit, as she uses a series of narrative tropes—including classic horror themes—to create an entirely unique piece of work which is destined to become an instant classic.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612184137/14_xdghoi.jpg"
   },
   {
     "bookID": 15,
@@ -179,7 +196,8 @@
     "num_pages": 357,
     "genre": "Fiction",
     "new_releases": "new_releases",
-    "synopsis": "Bart, Teddy and Cole have been best friends since childhood. Having founded their own small-town construction company, they yearn to build a legacy, something to leave behind to their families. So when Gretchen Connors, a mysterious millionaire lawyer from California, approaches them with a stunning, almost formidable project in the mountains above their town, the three friends convince themselves it's the job which will secure their future."
+    "synopsis": "Bart, Teddy and Cole have been best friends since childhood. Having founded their own small-town construction company, they yearn to build a legacy, something to leave behind to their families. So when Gretchen Connors, a mysterious millionaire lawyer from California, approaches them with a stunning, almost formidable project in the mountains above their town, the three friends convince themselves it's the job which will secure their future.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612196617/15_xqudss.jpg"
   },
   {
     "bookID": 16,
@@ -191,7 +209,9 @@
     "num_pages": 208,
     "genre": "Fiction",
     "new_releases": "new_releases",
-    "synopsis": "A lyrical and heartfelt collection by an award-winning writer that connects the lives of young people from small towns in Alaska and the American west. Each story is unique, yet universal."
+    "synopsis": "A lyrical and heartfelt collection by an award-winning writer that connects the lives of young people from small towns in Alaska and the American west. Each story is unique, yet universal.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612197083/16_ktwbel.jpg"
+
   },
   {
     "bookID": 17,
@@ -203,7 +223,8 @@
     "num_pages": 240,
     "genre": "Fiction",
     "new_releases": "No",
-    "synopsis": "In Alaska, 1970, being a teenager here isn’t like being a teenager anywhere else. Ruth has a secret that she can’t hide forever. Dora wonders if she can ever truly escape where she comes from, even when good luck strikes. Alyce is trying to reconcile her desire to dance, with the life she’s always known on her family’s fishing boat."
+    "synopsis": "In Alaska, 1970, being a teenager here isn’t like being a teenager anywhere else. Ruth has a secret that she can’t hide forever. Dora wonders if she can ever truly escape where she comes from, even when good luck strikes. Alyce is trying to reconcile her desire to dance, with the life she’s always known on her family’s fishing boat.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612197082/17_qgmxrh.jpg"
   },
   {
     "bookID": 18,
@@ -215,7 +236,8 @@
     "num_pages": 384,
     "genre": "Fiction",
     "new_releases": "No",
-    "synopsis": "Six days ago, astronaut Mark Watney became one of the first people to walk on Mars. Now, he’s sure he’ll be the first person to die there."
+    "synopsis": "Six days ago, astronaut Mark Watney became one of the first people to walk on Mars. Now, he’s sure he’ll be the first person to die there.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612197083/18_alt4rh.jpg"
   },
   {
     "bookID": 19,
@@ -227,7 +249,8 @@
     "num_pages": 384,
     "genre": "Fiction",
     "new_releases": "new_releases",
-    "synopsis": "Malibu: August 1983. It's the day of Nina Riva's annual end-of-summer party, and anticipation is at a fever pitch. Everyone wants to be around the famous Rivas: Nina, the talented surfer and supermodel; brothers Jay and Hud, one a championship surfer, the other a renowned photographer; and their adored baby sister, Kit."
+    "synopsis": "Malibu: August 1983. It's the day of Nina Riva's annual end-of-summer party, and anticipation is at a fever pitch. Everyone wants to be around the famous Rivas: Nina, the talented surfer and supermodel; brothers Jay and Hud, one a championship surfer, the other a renowned photographer; and their adored baby sister, Kit.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612197297/19_nqmvm1.jpg"
   },
   {
     "bookID": 20,
@@ -239,7 +262,8 @@
     "num_pages": 391,
     "genre": "Fiction",
     "new_releases": "No",
-    "synopsis": "Aging and reclusive Hollywood movie icon Evelyn Hugo is finally ready to tell the truth about her glamorous and scandalous life. When she chooses unknown magazine reporter Monique Grant for the job, no one in the journalism community is more astounded than Monique herself. Why her? Why now?"
+    "synopsis": "Aging and reclusive Hollywood movie icon Evelyn Hugo is finally ready to tell the truth about her glamorous and scandalous life. When she chooses unknown magazine reporter Monique Grant for the job, no one in the journalism community is more astounded than Monique herself. Why her? Why now?",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612198019/hugo_xspvjb.jpg"
   },
   {
     "bookID": 21,
@@ -251,7 +275,8 @@
     "num_pages": 343,
     "genre": "Fiction",
     "new_releases": "new_releases",
-    "synopsis": "The Vignes twin sisters will always be identical. But after growing up together in a small, southern black community and running away at age sixteen, it's not just the shape of their daily lives that is different as adults, it's everything: their families, their communities, their racial identities."
+    "synopsis": "The Vignes twin sisters will always be identical. But after growing up together in a small, southern black community and running away at age sixteen, it's not just the shape of their daily lives that is different as adults, it's everything: their families, their communities, their racial identities.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612197297/21_f90vkv.jpg"
   },
   {
     "bookID": 22,
@@ -263,7 +288,8 @@
     "num_pages": 450,
     "genre": "Fiction",
     "new_releases": "new_releases",
-    "synopsis": "In the summer of 1932, on the banks of Minnesota's Gilead River, the Lincoln Indian Training School is a pitiless place where Native American children, forcibly separated from their parents, are sent to be educated. It is also home to Odie O’Banion, a lively orphan boy whose exploits constantly earn him the superintendent’s wrath."
+    "synopsis": "In the summer of 1932, on the banks of Minnesota's Gilead River, the Lincoln Indian Training School is a pitiless place where Native American children, forcibly separated from their parents, are sent to be educated. It is also home to Odie O’Banion, a lively orphan boy whose exploits constantly earn him the superintendent’s wrath.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612197622/22_czcad6.jpg"
   },
   {
     "bookID": 23,
@@ -275,7 +301,8 @@
     "num_pages": 332,
     "genre": "Fiction",
     "new_releases": "No",
-    "synopsis": "Life is over in an instant for sixteen-year-old Finn Miller when a devastating car accident tumbles her and ten others over the side of a mountain. Suspended between worlds, she watches helplessly as those she loves struggle to survive."
+    "synopsis": "Life is over in an instant for sixteen-year-old Finn Miller when a devastating car accident tumbles her and ten others over the side of a mountain. Suspended between worlds, she watches helplessly as those she loves struggle to survive.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612197620/23_atkcgd.jpg"
   },
   {
     "bookID": 24,
@@ -287,7 +314,8 @@
     "num_pages": 319,
     "genre": "Noniction",
     "new_releases": "No",
-    "synopsis": "No matter your goals, Atomic Habits offers a proven framework for improving--every day. James Clear, one of the world's leading experts on habit formation, reveals practical strategies that will teach you exactly how to form good habits, break bad ones, and master the tiny behaviors that lead to remarkable results."
+    "synopsis": "No matter your goals, Atomic Habits offers a proven framework for improving--every day. James Clear, one of the world's leading experts on habit formation, reveals practical strategies that will teach you exactly how to form good habits, break bad ones, and master the tiny behaviors that lead to remarkable results.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612197620/24_eoyaat.jpg"
   },
   {
     "bookID": 25,
@@ -299,7 +327,8 @@
     "num_pages": 333,
     "genre": "Fiction",
     "new_releases": "new_releases",
-    "synopsis": "It’s been three years since Claire Kite lost her husband, David, an aspiring novelist, in a tragic car accident. Claire finally finds the courage to move on; then she discovers among the remnants of her shattered world her husband’s last manuscript. It’s intimate, stirring—and unfinished. An idea comes to her. What if she can find someone to give David’s novel the ending it deserves?"
+    "synopsis": "It’s been three years since Claire Kite lost her husband, David, an aspiring novelist, in a tragic car accident. Claire finally finds the courage to move on; then she discovers among the remnants of her shattered world her husband’s last manuscript. It’s intimate, stirring—and unfinished. An idea comes to her. What if she can find someone to give David’s novel the ending it deserves?",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612199055/story_reikyz.jpg"
   },
   {
     "bookID": 26,
@@ -311,7 +340,8 @@
     "num_pages": 440,
     "genre": "Fiction",
     "new_releases": "No",
-    "synopsis": "Ernt Allbright, a former POW, comes home from the Vietnam war a changed and volatile man. When he loses yet another job, he makes an impulsive decision: he will move his family north, to Alaska, where they will live off the grid in America’s last true frontier."
+    "synopsis": "Ernt Allbright, a former POW, comes home from the Vietnam war a changed and volatile man. When he loses yet another job, he makes an impulsive decision: he will move his family north, to Alaska, where they will live off the grid in America’s last true frontier.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612197629/26_e2rk3a.jpg"
   },
   {
     "bookID": 27,
@@ -323,7 +353,8 @@
     "num_pages": 479,
     "genre": "Fiction",
     "new_releases": "No",
-    "synopsis": "In the turbulent summer of 1974, Kate Mularkey has accepted her place at the bottom of the eighth-grade social food chain. Then, to her amazement, the “coolest girl in the world” moves in across the street and wants to be her friend. Tully Hart seems to have it all beauty, brains, ambition. "
+    "synopsis": "In the turbulent summer of 1974, Kate Mularkey has accepted her place at the bottom of the eighth-grade social food chain. Then, to her amazement, the “coolest girl in the world” moves in across the street and wants to be her friend. Tully Hart seems to have it all beauty, brains, ambition. ",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612197619/27_uospas.jpg"
   },
   {
     "bookID": 28,
@@ -336,7 +367,7 @@
     "genre": "Fiction",
     "new_releases": "new_releases",
     "synopsis": "Elsie the vampire is three hundred years old, but in all that time, she has never met her match. This all changes one night in a bar when she meets Jimmy, a charming werewolf with a wry sense of humor and a fondness for running wild during the full moon. Together they enjoy horror films and scary novels, shady strolls, fine dining (though never with garlic), and a genuine fondness for each other’s unusual habits, macabre lifestyles, and monstrous appetites.",
-    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1611849989/books/fangs_tztst6.jpg"
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1611698746/fangs.jpg"
   },
   {
     "bookID": 29,
@@ -348,7 +379,8 @@
     "num_pages": 432,
     "genre": "Fiction",
     "new_releases": "No",
-    "synopsis": "People say Beartown is finished. A tiny community nestled deep in the forest, it is slowly losing ground to the ever encroaching trees. But down by the lake stands an old ice rink, built generations ago by the working men who founded this town. And in that ice rink is the reason people in Beartown believe tomorrow will be better than today. Their junior ice hockey team is about to compete in the national semi-finals, and they actually have a shot at winning."
+    "synopsis": "People say Beartown is finished. A tiny community nestled deep in the forest, it is slowly losing ground to the ever encroaching trees. But down by the lake stands an old ice rink, built generations ago by the working men who founded this town. And in that ice rink is the reason people in Beartown believe tomorrow will be better than today. Their junior ice hockey team is about to compete in the national semi-finals, and they actually have a shot at winning.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612198094/bear_dj3q5b.jpg"
   },
   {
     "bookID": 30,
@@ -360,7 +392,8 @@
     "num_pages": 448,
     "genre": "Fiction",
     "new_releases": "No",
-    "synopsis": "After everything that the citizens of Beartown have gone through, they are struck yet another blow when they hear that their beloved local hockey team will soon be disbanded. What makes it worse is the obvious satisfaction that all the former Beartown players, who now play for a rival team in Hed, take in that fact. Amidst the mounting tension between the two rivals, a surprising newcomer is handpicked to be Beartown’s new hockey coach."
+    "synopsis": "After everything that the citizens of Beartown have gone through, they are struck yet another blow when they hear that their beloved local hockey team will soon be disbanded. What makes it worse is the obvious satisfaction that all the former Beartown players, who now play for a rival team in Hed, take in that fact. Amidst the mounting tension between the two rivals, a surprising newcomer is handpicked to be Beartown’s new hockey coach.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612197619/30_gdw6da.jpg"
   },
   {
     "bookID": 31,
@@ -372,7 +405,9 @@
     "num_pages": 496,
     "genre": "Fiction",
     "new_releases": "new_releases",
-    "synopsis": "As a massive storm batters the Scottish coast, Gordon Smith’s home is falling into the North Sea. But the crumbling headland has revealed what he’s got buried in his garden: human remains. With the storm still raging, it’s too dangerous to retrieve the bodies and waves are devouring the evidence. Which means no one knows how many people Smith’s already killed and how many more he’ll kill if he can’t be found and stopped."
+    "synopsis": "As a massive storm batters the Scottish coast, Gordon Smith’s home is falling into the North Sea. But the crumbling headland has revealed what he’s got buried in his garden: human remains. With the storm still raging, it’s too dangerous to retrieve the bodies and waves are devouring the evidence. Which means no one knows how many people Smith’s already killed and how many more he’ll kill if he can’t be found and stopped.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612198526/31_vnxsmz.jpg"
+
   },
   {
     "bookID": 32,
@@ -384,19 +419,21 @@
     "num_pages": 531,
     "genre": "Fiction",
     "new_releases": "No",
-    "synopsis": "From the highly acclaimed, multiple award-winning Anthony Doerr, the stunningly beautiful instant New York Times bestseller about a blind French girl and a German boy whose paths collide in occupied France as both try to survive the devastation of World War II. Marie-Laure lives in Paris near the Museum of Natural History, where her father works. When she is twelve, the Nazis occupy Paris and father and daughter flee to the walled citadel of Saint-Malo, where Marie-Laure’s reclusive great uncle lives in a tall house by the sea. With them they carry what might be the museum’s most valuable and dangerous jewel."
+    "synopsis": "From the highly acclaimed, multiple award-winning Anthony Doerr, the stunningly beautiful instant New York Times bestseller about a blind French girl and a German boy whose paths collide in occupied France as both try to survive the devastation of World War II. Marie-Laure lives in Paris near the Museum of Natural History, where her father works. When she is twelve, the Nazis occupy Paris and father and daughter flee to the walled citadel of Saint-Malo, where Marie-Laure’s reclusive great uncle lives in a tall house by the sea. With them they carry what might be the museum’s most valuable and dangerous jewel.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612198526/32_ozbbjp.jpg"
   },
   {
     "bookID": 33,
     "title": "American Dirt",
-    "authors": "American Dirt",
+    "authors": "Jeanine Cummins",
     "average_rating": 4.32,
     "isbn13": 9781250209764,
     "bestseller": "bestseller",
     "num_pages": 400,
     "genre": "Fiction",
     "new_releases": "new_releases",
-    "synopsis": "Lydia Quixano Pérez lives in the Mexican city of Acapulco. She runs a bookstore. She has a son, Luca, the love of her life, and a wonderful husband who is a journalist. And while there are cracks beginning to show in Acapulco because of the drug cartels, her life is, by and large, fairly comfortable. Even though she knows they’ll never sell, Lydia stocks some of her all-time favorite books in her store. And then one day a man enters the shop to browse and comes up to the register with a few books he would like to buy—two of them her favorites. Javier is erudite. He is charming. And, unbeknownst to Lydia, he is the jefe of the newest drug cartel that has gruesomely taken over the city. When Lydia’s husband’s tell-all profile of Javier is published, none of their lives will ever be the same."
+    "synopsis": "Lydia Quixano Pérez lives in the Mexican city of Acapulco. She runs a bookstore. She has a son, Luca, the love of her life, and a wonderful husband who is a journalist. And while there are cracks beginning to show in Acapulco because of the drug cartels, her life is, by and large, fairly comfortable. Even though she knows they’ll never sell, Lydia stocks some of her all-time favorite books in her store. And then one day a man enters the shop to browse and comes up to the register with a few books he would like to buy—two of them her favorites. Javier is erudite. He is charming. And, unbeknownst to Lydia, he is the jefe of the newest drug cartel that has gruesomely taken over the city. When Lydia’s husband’s tell-all profile of Javier is published, none of their lives will ever be the same.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612198526/33_rwfqek.jpg"
   },
   {
     "bookID": 34,
@@ -408,7 +445,8 @@
     "num_pages": 324,
     "genre": "Fiction",
     "new_releases": "No",
-    "synopsis": "Lowen Ashleigh is a struggling writer on the brink of financial ruin when she accepts the job offer of a lifetime. Jeremy Crawford, husband of bestselling author Verity Crawford, has hired Lowen to complete the remaining books in a successful series his injured wife is unable to finish. Lowen arrives at the Crawford home, ready to sort through years of Verity's notes and outlines, hoping to find enough material to get her started. What Lowen doesn't expect to uncover in the chaotic office is an unfinished autobiography Verity never intended for anyone to read."
+    "synopsis": "Lowen Ashleigh is a struggling writer on the brink of financial ruin when she accepts the job offer of a lifetime. Jeremy Crawford, husband of bestselling author Verity Crawford, has hired Lowen to complete the remaining books in a successful series his injured wife is unable to finish. Lowen arrives at the Crawford home, ready to sort through years of Verity's notes and outlines, hoping to find enough material to get her started. What Lowen doesn't expect to uncover in the chaotic office is an unfinished autobiography Verity never intended for anyone to read.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612198528/34_hwrcqp.jpg"
   },
   {
     "bookID": 35,
@@ -420,7 +458,8 @@
     "num_pages": 292,
     "genre": "Fiction",
     "new_releases": "No",
-    "synopsis": "In the summer of 1969, fourteen-year-old Lucas Painter carries a huge weight on his shoulders. His brother is fighting in Vietnam. His embattled parents are locked in a never-ending war. And his best friend, Connor, is struggling with his own family issues. To find relief from the chaos, Lucas takes long, meandering walks, and one day he veers into the woods. There he discovers an isolated cabin and two huge dogs. Frightened, he runs. And the dogs run with him. Lucas finds unusual peace in running with the dogs, and eventually he meets their owner, Zoe Dinsmore. "
+    "synopsis": "In the summer of 1969, fourteen-year-old Lucas Painter carries a huge weight on his shoulders. His brother is fighting in Vietnam. His embattled parents are locked in a never-ending war. And his best friend, Connor, is struggling with his own family issues. To find relief from the chaos, Lucas takes long, meandering walks, and one day he veers into the woods. There he discovers an isolated cabin and two huge dogs. Frightened, he runs. And the dogs run with him. Lucas finds unusual peace in running with the dogs, and eventually he meets their owner, Zoe Dinsmore.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612198526/35_lzpikj.jpg"
   },
   {
     "bookID": 36,
@@ -432,7 +471,8 @@
     "num_pages": 362,
     "genre": "Fiction",
     "new_releases": "No",
-    "synopsis": "August Shroeder, a burned-out teacher, has been sober since his 19-year-old son died. Every year he's spent the summer on the road, but making it to Yellowstone this year means everything. The plan had been to travel there with his son, but now August is making the trip with Philip's ashes instead. An unexpected twist of fate lands August with two extra passengers for his journey, two half-orphans with nowhere else to go. What none of them could have known was how transformative both the trip and the bonds that develop between them would prove, driving each to create a new destiny together."
+    "synopsis": "August Shroeder, a burned-out teacher, has been sober since his 19-year-old son died. Every year he's spent the summer on the road, but making it to Yellowstone this year means everything. The plan had been to travel there with his son, but now August is making the trip with Philip's ashes instead. An unexpected twist of fate lands August with two extra passengers for his journey, two half-orphans with nowhere else to go. What none of them could have known was how transformative both the trip and the bonds that develop between them would prove, driving each to create a new destiny together.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612198525/36_kewy0t.jpg"
   },
   {
     "bookID": 37,
@@ -444,7 +484,8 @@
     "num_pages": 374,
     "genre": "Fiction",
     "new_releases": "No",
-    "synopsis": "Finley’s only retreat is the Everwood, a forest kingdom that exists in the pages of her notebook. Until she discovers the endless woods behind her grandparents’ house and realizes the Everwood is real--and holds more mysteries than she'd ever imagined, including a family of pirates that she isn’t allowed to talk to, trees covered in ash, and a strange old wizard living in a house made of bones. With the help of her cousins, Finley sets out on a mission to save the dying Everwood and uncover its secrets. But as the mysteries pile up and the frightening sadness inside her grows, Finley realizes that if she wants to save the Everwood, she’ll first have to save herself."
+    "synopsis": "Finley’s only retreat is the Everwood, a forest kingdom that exists in the pages of her notebook. Until she discovers the endless woods behind her grandparents’ house and realizes the Everwood is real--and holds more mysteries than she'd ever imagined, including a family of pirates that she isn’t allowed to talk to, trees covered in ash, and a strange old wizard living in a house made of bones. With the help of her cousins, Finley sets out on a mission to save the dying Everwood and uncover its secrets. But as the mysteries pile up and the frightening sadness inside her grows, Finley realizes that if she wants to save the Everwood, she’ll first have to save herself.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612198526/37_wyvabd.jpg"
   },
   {
     "bookID": 38,
@@ -456,7 +497,8 @@
     "num_pages": 531,
     "genre": "Fiction",
     "new_releases": "No",
-    "synopsis": "From the highly acclaimed, multiple award-winning Anthony Doerr, the stunningly beautiful instant New York Times bestseller about a blind French girl and a German boy whose paths collide in occupied France as both try to survive the devastation of World War II. Marie-Laure lives in Paris near the Museum of Natural History, where her father works. When she is twelve, the Nazis occupy Paris and father and daughter flee to the walled citadel of Saint-Malo, where Marie-Laure’s reclusive great uncle lives in a tall house by the sea. With them they carry what might be the museum’s most valuable and dangerous jewel."
+    "synopsis": "From the highly acclaimed, multiple award-winning Anthony Doerr, the stunningly beautiful instant New York Times bestseller about a blind French girl and a German boy whose paths collide in occupied France as both try to survive the devastation of World War II. Marie-Laure lives in Paris near the Museum of Natural History, where her father works. When she is twelve, the Nazis occupy Paris and father and daughter flee to the walled citadel of Saint-Malo, where Marie-Laure’s reclusive great uncle lives in a tall house by the sea. With them they carry what might be the museum’s most valuable and dangerous jewel.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612198526/32_ozbbjp.jpg"
   },
   {
     "bookID": 39,
@@ -468,7 +510,8 @@
     "num_pages": 720,
     "genre": "Fiction",
     "new_releases": "No",
-    "synopsis": "Brace yourself for the most astonishing, challenging, upsetting, and profoundly moving book in many a season. An epic about love and friendship in the twenty-first century that goes into some of the darkest places fiction has ever traveled and yet somehow improbably breaks through into the light. Truly an amazement—and a great gift for its readers. When four classmates from a small Massachusetts college move to New York to make their way, they're broke, adrift, and buoyed only by their friendship and ambition. There is kind, handsome Willem, an aspiring actor; JB, a quick-witted, sometimes cruel Brooklyn-born painter seeking entry to the art world; Malcolm, a frustrated architect at a prominent firm; and withdrawn, brilliant, enigmatic Jude, who serves as their center of gravity."
+    "synopsis": "Brace yourself for the most astonishing, challenging, upsetting, and profoundly moving book in many a season. An epic about love and friendship in the twenty-first century that goes into some of the darkest places fiction has ever traveled and yet somehow improbably breaks through into the light. Truly an amazement—and a great gift for its readers. When four classmates from a small Massachusetts college move to New York to make their way, they're broke, adrift, and buoyed only by their friendship and ambition. There is kind, handsome Willem, an aspiring actor; JB, a quick-witted, sometimes cruel Brooklyn-born painter seeking entry to the art world; Malcolm, a frustrated architect at a prominent firm; and withdrawn, brilliant, enigmatic Jude, who serves as their center of gravity.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612198526/39_y4lffq.jpg"
   },
   {
     "bookID": 40,
@@ -480,7 +523,8 @@
     "num_pages": 859,
     "genre": "Fiction",
     "new_releases": "No",
-    "synopsis": "Jake Epping is a thirty-five-year-old high school English teacher in Lisbon Falls, Maine, who makes extra money teaching adults in the GED program. He receives an essay from one of the students—a gruesome, harrowing first person story about the night 50 years ago when Harry Dunning’s father came home and killed his mother, his sister, and his brother with a hammer. Harry escaped with a smashed leg, as evidenced by his crooked walk."
+    "synopsis": "Jake Epping is a thirty-five-year-old high school English teacher in Lisbon Falls, Maine, who makes extra money teaching adults in the GED program. He receives an essay from one of the students—a gruesome, harrowing first person story about the night 50 years ago when Harry Dunning’s father came home and killed his mother, his sister, and his brother with a hammer. Harry escaped with a smashed leg, as evidenced by his crooked walk.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612198525/40_ddc8gk.jpg"
   },
   {
     "bookID": 41,
@@ -492,7 +536,8 @@
     "num_pages": 370,
     "genre": "Fiction",
     "new_releases": "No",
-    "synopsis": "Paul Sheldon. He's a bestselling novelist who has finally met his biggest fan. Her name is Annie Wilkes and she is more than a rabid reader - she is Paul's nurse, tending his shattered body after an automobile accident. But she is also his captor, keeping him prisoner in her isolated house."
+    "synopsis": "Paul Sheldon. He's a bestselling novelist who has finally met his biggest fan. Her name is Annie Wilkes and she is more than a rabid reader - she is Paul's nurse, tending his shattered body after an automobile accident. But she is also his captor, keeping him prisoner in her isolated house.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612293114/41_int5fe.jpg"
   },
   {
     "bookID": 42,
@@ -504,7 +549,8 @@
     "num_pages": 659,
     "genre": "Fiction",
     "new_releases": "No",
-    "synopsis": "Jack Torrance's new job at the Overlook Hotel is the perfect chance for a fresh start. As the off-season caretaker at the atmospheric old hotel, he'll have plenty of time to spend reconnecting with his family and working on his writing. But as the harsh winter weather sets in, the idyllic location feels ever more remote...and more sinister. And the only one to notice the strange and terrible forces gathering around the Overlook is Danny Torrance, a uniquely gifted five-year-old."
+    "synopsis": "Jack Torrance's new job at the Overlook Hotel is the perfect chance for a fresh start. As the off-season caretaker at the atmospheric old hotel, he'll have plenty of time to spend reconnecting with his family and working on his writing. But as the harsh winter weather sets in, the idyllic location feels ever more remote...and more sinister. And the only one to notice the strange and terrible forces gathering around the Overlook is Danny Torrance, a uniquely gifted five-year-old.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612293114/42_xnm6am.jpg"
   },
   {
     "bookID": 43,
@@ -516,7 +562,8 @@
     "num_pages": 580,
     "genre": "Fiction",
     "new_releases": "No",
-    "synopsis": "When the Creeds move into a beautiful old house in rural Maine, it all seems too good to be true: physician father, beautiful wife, charming little daughter, adorable infant son-and now an idyllic home. As a family, they've got it all...right down to the friendly car. But the nearby woods hide a blood-chilling truth-more terrifying than death itself-and hideously more powerful. The Creeds are going to learn that sometimes dead is better."
+    "synopsis": "When the Creeds move into a beautiful old house in rural Maine, it all seems too good to be true: physician father, beautiful wife, charming little daughter, adorable infant son-and now an idyllic home. As a family, they've got it all...right down to the friendly car. But the nearby woods hide a blood-chilling truth-more terrifying than death itself-and hideously more powerful. The Creeds are going to learn that sometimes dead is better.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612293114/43_lq3xce.jpg"
   },
   {
     "bookID": 44,
@@ -528,7 +575,8 @@
     "num_pages": 169,
     "genre": "Nonfiction",
     "new_releases": "No",
-    "synopsis": "Claudia Rankine's bold new book recounts mounting racial aggressions in ongoing encounters in twenty-first-century daily life and in the media. Some of these encounters are slights, seeming slips of the tongue, and some are intentional offensives in the classroom, at the supermarket, at home, on the tennis court with Serena Williams and the soccer field with Zinedine Zidane, online, on TV-everywhere, all the time. The accumulative stresses come to bear on a person's ability to speak, perform, and stay alive."
+    "synopsis": "Claudia Rankine's bold new book recounts mounting racial aggressions in ongoing encounters in twenty-first-century daily life and in the media. Some of these encounters are slights, seeming slips of the tongue, and some are intentional offensives in the classroom, at the supermarket, at home, on the tennis court with Serena Williams and the soccer field with Zinedine Zidane, online, on TV-everywhere, all the time. The accumulative stresses come to bear on a person's ability to speak, perform, and stay alive.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612293647/44_gvc4cf.jpg"
   },
   {
     "bookID": 45,
@@ -540,7 +588,9 @@
     "num_pages": 306,
     "genre": "Fiction",
     "new_releases": "No",
-    "synopsis": "An ode to Put the Damn Guns Down, this is New York Times bestseller Jason Reynolds’s fiercely stunning novel that takes place in sixty potent seconds—the time it takes a kid to decide whether or not he’s going to murder the guy who killed his brother."
+    "synopsis": "An ode to Put the Damn Guns Down, this is New York Times bestseller Jason Reynolds’s fiercely stunning novel that takes place in sixty potent seconds—the time it takes a kid to decide whether or not he’s going to murder the guy who killed his brother.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612293647/45_b0tqlk.jpg"
+  
   },
   {
     "bookID": 46,
@@ -552,7 +602,8 @@
     "num_pages": 367,
     "genre": "Fiction",
     "new_releases": "No",
-    "synopsis": "After artist Claire Beaudry Chase is attacked and left for dead in her home on the Connecticut coast, she doesn’t know who she can trust. But her well-connected husband, Griffin—who is running for governor—is her prime suspect. Just before the attack, Claire was preparing for an exhibit of her shadow boxes, one of which clearly accuses Griffin of a violent crime committed twenty-five years ago. If the public were to find out who her husband is, his political career would be over. Claire’s certain her husband and his powerful supporters would kill her to stop the truth from getting out."
+    "synopsis": "After artist Claire Beaudry Chase is attacked and left for dead in her home on the Connecticut coast, she doesn’t know who she can trust. But her well-connected husband, Griffin—who is running for governor—is her prime suspect. Just before the attack, Claire was preparing for an exhibit of her shadow boxes, one of which clearly accuses Griffin of a violent crime committed twenty-five years ago. If the public were to find out who her husband is, his political career would be over. Claire’s certain her husband and his powerful supporters would kill her to stop the truth from getting out.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612293639/46_ygmajd.jpg"
   },
   {
     "bookID": 47,
@@ -564,7 +615,8 @@
     "num_pages": 324,
     "genre": "Classics",
     "new_releases": "No",
-    "synopsis": "The unforgettable novel of a childhood in a sleepy Southern town and the crisis of conscience that rocked it. To Kill A Mockingbird became both an instant bestseller and a critical success when it was first published in 1960. It went on to win the Pulitzer Prize in 1961 and was later made into an Academy Award-winning film, also a classic."
+    "synopsis": "The unforgettable novel of a childhood in a sleepy Southern town and the crisis of conscience that rocked it. To Kill A Mockingbird became both an instant bestseller and a critical success when it was first published in 1960. It went on to win the Pulitzer Prize in 1961 and was later made into an Academy Award-winning film, also a classic.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612293639/47_virk3v.jpg"
   },
   {
     "bookID": 48,
@@ -576,7 +628,8 @@
     "num_pages": 237,
     "genre": "Classics",
     "new_releases": "No",
-    "synopsis": "Among the seminal texts of the 20th century, Nineteen Eighty-Four is a rare work that grows more haunting as its futuristic purgatory becomes more real. Published in 1949, the book offers political satirist George Orwell's nightmarish vision of a totalitarian, bureaucratic world and one poor stiff's attempt to find individuality. The brilliance of the novel is Orwell's prescience of modern life—the ubiquity of television, the distortion of the language—and his ability to construct such a thorough version of hell. Required reading for students since it was published, it ranks among the most terrifying novels ever written."
+    "synopsis": "Among the seminal texts of the 20th century, Nineteen Eighty-Four is a rare work that grows more haunting as its futuristic purgatory becomes more real. Published in 1949, the book offers political satirist George Orwell's nightmarish vision of a totalitarian, bureaucratic world and one poor stiff's attempt to find individuality. The brilliance of the novel is Orwell's prescience of modern life—the ubiquity of television, the distortion of the language—and his ability to construct such a thorough version of hell. Required reading for students since it was published, it ranks among the most terrifying novels ever written.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612293639/48_bven7x.jpg"
   },
   {
     "bookID": 49,
@@ -588,7 +641,8 @@
     "num_pages": 277,
     "genre": "Classics",
     "new_releases": "No",
-    "synopsis": "The hero-narrator of The Catcher in the Rye is an ancient child of sixteen, a native New Yorker named Holden Caulfield. Through circumstances that tend to preclude adult, secondhand description, he leaves his prep school in Pennsylvania and goes underground in New York City for three days. The boy himself is at once too simple and too complex for us to make any final comment about him or his story. Perhaps the safest thing we can say about Holden is that he was born in the world not just strongly attracted to beauty but, almost, hopelessly impaled on it. There are many voices in this novel: children's voices, adult voices, underground voices-but Holden's voice is the most eloquent of all."
+    "synopsis": "The hero-narrator of The Catcher in the Rye is an ancient child of sixteen, a native New Yorker named Holden Caulfield. Through circumstances that tend to preclude adult, secondhand description, he leaves his prep school in Pennsylvania and goes underground in New York City for three days. The boy himself is at once too simple and too complex for us to make any final comment about him or his story. Perhaps the safest thing we can say about Holden is that he was born in the world not just strongly attracted to beauty but, almost, hopelessly impaled on it. There are many voices in this novel: children's voices, adult voices, underground voices-but Holden's voice is the most eloquent of all.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612293639/49_xcygdg.jpg"
   },
   {
     "bookID": 50,
@@ -600,7 +654,8 @@
     "num_pages": 182,
     "genre": "Classics",
     "new_releases": "No",
-    "synopsis": "At the dawn of the next world war, a plane crashes on an uncharted island, stranding a group of schoolboys. At first, with no adult supervision, their freedom is something to celebrate; this far from civilization the boys can do anything they want. Anything. They attempt to forge their own society, failing, however, in the face of terror, sin and evil. And as order collapses, as strange howls echo in the night, as terror begins its reign, the hope of adventure seems as far from reality as the hope of being rescued."
+    "synopsis": "At the dawn of the next world war, a plane crashes on an uncharted island, stranding a group of schoolboys. At first, with no adult supervision, their freedom is something to celebrate; this far from civilization the boys can do anything they want. Anything. They attempt to forge their own society, failing, however, in the face of terror, sin and evil. And as order collapses, as strange howls echo in the night, as terror begins its reign, the hope of adventure seems as far from reality as the hope of being rescued.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612293639/50_vbfe3o.jpg"
   },
   {
     "bookID": 51,
@@ -612,7 +667,8 @@
     "num_pages": 336,
     "genre": "Fiction",
     "new_releases": "No",
-    "synopsis": "Meet Eleanor Oliphant: she struggles with appropriate social skills and tends to say exactly what she’s thinking. Nothing is missing in her carefully timetabled life of avoiding unnecessary human contact, where weekends are punctuated by frozen pizza, vodka, and phone chats with Mummy."
+    "synopsis": "Meet Eleanor Oliphant: she struggles with appropriate social skills and tends to say exactly what she’s thinking. Nothing is missing in her carefully timetabled life of avoiding unnecessary human contact, where weekends are punctuated by frozen pizza, vodka, and phone chats with Mummy.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612294300/51_dxrwos.jpg"
   },
   {
     "bookID": 52,
@@ -624,7 +680,8 @@
     "num_pages": 357,
     "genre": "Fiction",
     "new_releases": "No",
-    "synopsis": "When Olivia Shaw’s mother dies, the sophisticated food editor is astonished to learn she’s inherited a centuries-old English estate—and a title to go with it. Raw with grief and reeling from the knowledge that her reserved mother hid something so momentous, Olivia leaves San Francisco and crosses the pond to unravel the mystery of a lifetime."
+    "synopsis": "When Olivia Shaw’s mother dies, the sophisticated food editor is astonished to learn she’s inherited a centuries-old English estate—and a title to go with it. Raw with grief and reeling from the knowledge that her reserved mother hid something so momentous, Olivia leaves San Francisco and crosses the pond to unravel the mystery of a lifetime.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612294299/52_eyt8pn.jpg"
   },
   {
     "bookID": 53,
@@ -636,7 +693,8 @@
     "num_pages": 262,
     "genre": "Fiction",
     "new_releases": "No",
-    "synopsis": "In April 1942, Lale Sokolov, a Slovakian Jew, is forcibly transported to the concentration camps at Auschwitz-Birkenau. When his captors discover that he speaks several languages, he is put to work as a Tätowierer (the German word for tattooist), tasked with permanently marking his fellow prisoners."
+    "synopsis": "In April 1942, Lale Sokolov, a Slovakian Jew, is forcibly transported to the concentration camps at Auschwitz-Birkenau. When his captors discover that he speaks several languages, he is put to work as a Tätowierer (the German word for tattooist), tasked with permanently marking his fellow prisoners.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612294303/53_waoovh.jpg"
   },
   {
     "bookID": 54,
@@ -648,7 +706,8 @@
     "num_pages": 314,
     "genre": "Fiction",
     "new_releases": "new_releases",
-    "synopsis": "For twenty-six years Liz has perfectly played the part of Mrs. Thomas Lightsey, exemplary pastor’s wife and mother. But maintaining appearances for the congregation and catering to her demanding husband takes a toll, and she’s lost herself in meeting the expectations of others. When Thomas suddenly dies, Liz feels shock, grief, and, to her surprise, the siren song of freedom. Dare she dream of a life to call her own?"
+    "synopsis": "For twenty-six years Liz has perfectly played the part of Mrs. Thomas Lightsey, exemplary pastor’s wife and mother. But maintaining appearances for the congregation and catering to her demanding husband takes a toll, and she’s lost herself in meeting the expectations of others. When Thomas suddenly dies, Liz feels shock, grief, and, to her surprise, the siren song of freedom. Dare she dream of a life to call her own?",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612294299/54_mduyy5.jpg"
   },
   {
     "bookID": 55,
@@ -660,7 +719,8 @@
     "num_pages": 338,
     "genre": "Fiction",
     "new_releases": "No",
-    "synopsis": "This Is How It Always Is is a novel about revelations, transformations, fairy tales, and family. And it’s about the ways this is how it always is: Change is always hard and miraculous and hard again, parenting is always a leap into the unknown with crossed fingers and full hearts, children grow but not always according to plan. And families with secrets don’t get to keep them forever."
+    "synopsis": "This Is How It Always Is is a novel about revelations, transformations, fairy tales, and family. And it’s about the ways this is how it always is: Change is always hard and miraculous and hard again, parenting is always a leap into the unknown with crossed fingers and full hearts, children grow but not always according to plan. And families with secrets don’t get to keep them forever.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612294299/55_adoavk.jpg"
   },
   {
     "bookID": 56,
@@ -672,7 +732,8 @@
     "num_pages": 374,
     "genre": "Fiction",
     "new_releases": "No",
-    "synopsis": "In the year 2044, reality is an ugly place. The only time teenage Wade Watts really feels alive is when he's jacked into the virtual utopia known as the OASIS. Wade's devoted his life to studying the puzzles hidden within this world's digital confines, puzzles that are based on their creator's obsession with the pop culture of decades past and that promise massive power and fortune to whoever can unlock them."
+    "synopsis": "In the year 2044, reality is an ugly place. The only time teenage Wade Watts really feels alive is when he's jacked into the virtual utopia known as the OASIS. Wade's devoted his life to studying the puzzles hidden within this world's digital confines, puzzles that are based on their creator's obsession with the pop culture of decades past and that promise massive power and fortune to whoever can unlock them.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612294299/56_wm0dgg.jpg"
   },
   {
     "bookID": 57,
@@ -684,7 +745,8 @@
     "num_pages": 368,
     "genre": "Fiction",
     "new_releases": "new_releases",
-    "synopsis": "Emma loves her life. She’s the mother of a precocious kindergartener, married to her soulmate—a loyal and loving police detective—and has a rewarding career as a doctor at the local hospital. But everything comes crashing down when her son, Josh, is diagnosed with a rare form of cancer. Determined to save him, Emma makes the risky decision to sell opioids to fund the life-saving treatment he needs. But when somebody ends up dead, a lethal game of cat and mouse ensues, her own husband leading the chase. With her son’s life hanging in the balance, Emma is dragged into the dark world of drugs, lies, and murder. Will the truth catch up to her before she can save Josh?."
+    "synopsis": "Emma loves her life. She’s the mother of a precocious kindergartener, married to her soulmate—a loyal and loving police detective—and has a rewarding career as a doctor at the local hospital. But everything comes crashing down when her son, Josh, is diagnosed with a rare form of cancer. Determined to save him, Emma makes the risky decision to sell opioids to fund the life-saving treatment he needs. But when somebody ends up dead, a lethal game of cat and mouse ensues, her own husband leading the chase. With her son’s life hanging in the balance, Emma is dragged into the dark world of drugs, lies, and murder. Will the truth catch up to her before she can save Josh?.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612294299/57_oa9ibv.jpg"
   },
   {
     "bookID": 58,
@@ -696,7 +758,8 @@
     "num_pages": 337,
     "genre": "Fiction",
     "new_releases": "No",
-    "synopsis": "When Tate Collins meets airline pilot Miles Archer, she knows it isn’t love at first sight. They wouldn’t even go so far as to consider themselves friends. The only thing Tate and Miles have in common is an undeniable mutual attraction. Once their desires are out in the open, they realize they have the perfect set-up. He doesn’t want love, she doesn’t have time for love, so that just leaves the sex. Their arrangement could be surprisingly seamless, as long as Tate can stick to the only two rules Miles has for her."
+    "synopsis": "When Tate Collins meets airline pilot Miles Archer, she knows it isn’t love at first sight. They wouldn’t even go so far as to consider themselves friends. The only thing Tate and Miles have in common is an undeniable mutual attraction. Once their desires are out in the open, they realize they have the perfect set-up. He doesn’t want love, she doesn’t have time for love, so that just leaves the sex. Their arrangement could be surprisingly seamless, as long as Tate can stick to the only two rules Miles has for her.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612294299/58_lshjhl.jpg"
   },
   {
     "bookID": 59,
@@ -708,7 +771,8 @@
     "num_pages": 256,
     "genre": "Fiction",
     "new_releases": "new_releases",
-    "synopsis": "Franny Stone has always been the kind of woman who is able to love but unable to stay. Leaving behind everything but her research gear, she arrives in Greenland with a singular purpose: to follow the last Arctic terns in the world on what might be their final migration to Antarctica. Franny talks her way onto a fishing boat, and she and the crew set sail, traveling ever further from shore and safety. But as Franny’s history begins to unspool—a passionate love affair, an absent family, a devastating crime—it becomes clear that she is chasing more than just the birds. When Franny's dark secrets catch up with her, how much is she willing to risk for one more chance at redemption?"
+    "synopsis": "Franny Stone has always been the kind of woman who is able to love but unable to stay. Leaving behind everything but her research gear, she arrives in Greenland with a singular purpose: to follow the last Arctic terns in the world on what might be their final migration to Antarctica. Franny talks her way onto a fishing boat, and she and the crew set sail, traveling ever further from shore and safety. But as Franny’s history begins to unspool—a passionate love affair, an absent family, a devastating crime—it becomes clear that she is chasing more than just the birds. When Franny's dark secrets catch up with her, how much is she willing to risk for one more chance at redemption?",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612294299/59_dhqzip.jpg"
   },
   {
     "bookID": 60,
@@ -720,6 +784,7 @@
     "num_pages": 400,
     "genre": "Fiction",
     "new_releases": "new_releases",
-    "synopsis": "Isaiah was Samuel’s and Samuel was Isaiah’s. That was the way it was since the beginning, and the way it was to be until the end. In the barn they tended to the animals, but also to each other, transforming the hollowed-out shed into a place of human refuge, a source of intimacy and hope in a world ruled by vicious masters. But when an older man—a fellow slave—seeks to gain favor by preaching the master’s gospel on the plantation, the enslaved begin to turn on their own. Isaiah and Samuel’s love, which was once so simple, is seen as sinful and a clear danger to the plantation’s harmony."
+    "synopsis": "Isaiah was Samuel’s and Samuel was Isaiah’s. That was the way it was since the beginning, and the way it was to be until the end. In the barn they tended to the animals, but also to each other, transforming the hollowed-out shed into a place of human refuge, a source of intimacy and hope in a world ruled by vicious masters. But when an older man—a fellow slave—seeks to gain favor by preaching the master’s gospel on the plantation, the enslaved begin to turn on their own. Isaiah and Samuel’s love, which was once so simple, is seen as sinful and a clear danger to the plantation’s harmony.",
+    "imageUrl": "https://res.cloudinary.com/katsiez/image/upload/v1612294299/60_idmebm.jpg"
   }
 ]

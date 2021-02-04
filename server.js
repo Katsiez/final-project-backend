@@ -3,6 +3,7 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import mongoose from "mongoose";
 import bcrypt from "bcrypt";
+import crypto from "crypto"
 import endpoints from "express-list-endpoints";
 import dotenv from "dotenv";
 import cloudinaryFramework from "cloudinary";
@@ -11,12 +12,30 @@ import cloudinaryStorage from "multer-storage-cloudinary";
 
 //import { User } from "./models/user";
 import { Book } from "./models/book";
-import { Bag } from "./models/bag";
+import { Cart } from "./models/cart";
 import booksData from "./models/data/books.json";
 import bestsellersData from "./models/data/bestsellers.json";
 
 //Cloudinary image storage
 dotenv.config();
+
+//Set up MongoDB
+const mongoUrl =
+  process.env.MONGO_URL || "mongodb://localhost/finalProjectBackend";
+mongoose.connect(mongoUrl, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+mongoose.Promise = Promise;
+mongoose.set("useCreateIndex", true);
+
+//   PORT=8000 npm start
+const port = process.env.PORT || 8000;
+const app = express();
+
+// Add middlewares to enable cors and json body parsing
+app.use(cors());
+app.use(bodyParser.json());
 
 /////////////////////////////////////////////
 //Set up Cloudinary
@@ -31,7 +50,7 @@ const storage = cloudinaryStorage({
   cloudinary,
   params: {
     folder: "books",
-    allowedFormats: ["jpg", "png"],
+    allowedFormats: ["jpg", "png", "gif"],
     transformation: [{ width: 500, height: 500, crop: "limit" }],
   },
 });
@@ -40,45 +59,28 @@ const parser = multer({ storage });
 
 /////////////////////////////////////////////////////
 //error messages from the server
-const error_CANNOT_LOGIN = "Please try logging in again";
-const error_CANNOT_ACCESS = "Access token is incorrect or missing";
-const ERR_CANNOT_CREATE_USER =
-  "Error while creating the user, please try again";
 const ERR_CANNOT_ADD_IMAGE = "Cannot load the image";
 ////////////////////////////////////////////////////////
 
-const mongoUrl =
-  process.env.MONGO_URL || "mongodb://localhost/finalProjectBackend";
-mongoose.connect(mongoUrl, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
-mongoose.Promise = Promise;
-mongoose.set("useCreateIndex", true);
-
-const bookImage = mongoose.model("bookImage", {
-  name: String,
-  imageUrl: String,
-});
-//***USER MODEL***//
+///////////////***USER MODEL***///////////////
 const userSchema = new mongoose.Schema({
   name: {
     type: String,
     minlength: 3,
     maxlength: 20,
     unique: true,
-    required: true,
+    required: true
   },
   password: {
     type: String,
     minlength: 6,
     maxlength: 10,
-    required: true,
+    required: true
   },
   accessToken: {
     type: String,
     default: () => crypto.randomBytes(128).toString("hex"),
-    unique: true,
+    unique: true
   },
 });
 
@@ -93,14 +95,6 @@ userSchema.pre("save", async function (next) {
 });
 
 const User = mongoose.model("User", userSchema);
-
-//   PORT=8000 npm start
-const port = process.env.PORT || 8000;
-const app = express();
-
-// Add middlewares to enable cors and json body parsing
-app.use(cors());
-app.use(bodyParser.json());
 
 //* USER AUTHENTICATION *//
 const authenticateUser = async (req, res, next) => {
@@ -170,7 +164,7 @@ app.post("/login", async (req, res) => {
   }
 });
 
-//***BOOK MODEL***//
+////////////////////////////////***BOOK MODEL***////////////////////////////////
 //Seed the database
 // if (process.env.RESET_DATABASE) {
 const seedDatabase = async () => {
@@ -187,25 +181,6 @@ seedDatabase();
 app.get("/books", async (req, res) => {
   const allBooks = await Book.find();
   res.json(allBooks);
-});
-
-//Add book images for each bbook
-app.post("/books/:id/image", parser.single("image"), async (req, res) => {
-  const { id } = req.params;
-  const { path } = req.file;
-  const { filename } = req.file;
-
-  console.log(`POST /books/${id}/image`);
-  try {
-    const updatedBook = await Book.findOneAndUpdate(
-      { _id: id },
-      { imageUrl: path, imageName: filename },
-      { new: true }
-    );
-    res.status(201).json(updatedBook);
-  } catch (err) {
-    res.status(400).json({ message: ERR_CANNOT_ADD_IMAGE, errors: err });
-  }
 });
 // app.get("/books", async (req, res) => {
 //   const booksCount = booksData.length
@@ -226,6 +201,26 @@ app.post("/books/:id/image", parser.single("image"), async (req, res) => {
 //     pageCount
 //   })
 // });
+
+
+//Add book images for each bbook
+app.post("/books/:id/image", parser.single("image"), async (req, res) => {
+  const { id } = req.params;
+  const { path } = req.file;
+  const { filename } = req.file;
+
+  console.log(`POST /books/${id}/image`);
+  try {
+    const updatedBook = await Book.findOneAndUpdate(
+      { _id: id },
+      { imageUrl: path, imageName: filename },
+      { new: true }
+    );
+    res.status(201).json(updatedBook);
+  } catch (err) {
+    res.status(400).json({ message: ERR_CANNOT_ADD_IMAGE, errors: err });
+  }
+});
 
 // Show a single book based on the ID - example path: books/1
 app.get("/books/book/:bookID", (req, res) => {
@@ -290,21 +285,21 @@ app.get("/books/new_releases/:new_releases", async (req, res) => {
   }
 });
 
-//***BAG MODEL***//
-//Add books to shopping bag
-app.post("/bag", async (req, res) => {
+//***CART MODEL***//
+//Add books to shopping cart
+app.post("/cart", async (req, res) => {
   try {
     const { title, authors, quanitity } = req.body;
     //addd image and price to this const??
-    const bagItem = new Bag({
+    const cartItem = new Cart({
       title,
       authors,
       quanitity,
     });
-    const newBagItem = await bagItem.save();
+    const newCartItem = await cartItem.save();
     res
       .status(201)
-      .json({ message: "Book added to your bag", item: newBagItem });
+      .json({ message: "Book added to your cart", item: newCartItem });
   } catch (err) {
     res.status(400).json({
       message: "Something went wrong. Try adding that book in again!",
@@ -315,58 +310,58 @@ app.post("/bag", async (req, res) => {
 
 //Not sure if I want to have this part, but to take an item out, I probably need to have an endpoint to add more items first??
 //Up the quantity of books
-app.put("/bag/:id/add", async (req, res) => {
+app.put("/cart/:id/add", async (req, res) => {
   const { id } = req.params;
-  const book = await Bag.findOne({ id: id });
+  const book = await Cart.findOne({ id: id });
   console.log(book);
   try {
     if (book.quantity === 1) {
-      const removeBook = await Bag.deleteOne({ id: id });
+      const removeBook = await Cart.deleteOne({ id: id });
       res
         .status(201)
-        .json({ message: `Book removed from shopping bag`, item: removeBook });
+        .json({ message: `Book removed from shopping cart`, item: removeBook });
     } else {
-      const updatedBagItem = await Bag.updateOne(
+      const updatedCartItem = await Cart.updateOne(
         { id: id },
         { $inc: { quantity: -1 } }
       );
       res.status(201).json({
-        message: `Updated shopping bag with with book id:${id}`,
-        item: updatedBagItem,
+        message: `Updated shopping cart with with book id:${id}`,
+        item: updatedCartItem,
       });
     }
   } catch (err) {
     res.status(400).json({
-      message: `Could not update shopping bag with book id:${id}`,
+      message: `Could not update shopping cart with book id:${id}`,
       errors: err,
     });
   }
 });
 
 //Remove one book (1 quantity)
-app.delete("/bag/:id/remove", async (req, res) => {
+app.delete("/cart/:id/remove", async (req, res) => {
   const { id } = req.params;
-  const removeBook = await Bag.deleteOne({ id: id });
+  const removeBook = await Cart.deleteOne({ id: id });
   res.status(201).json({
-    message: `Book with id:${id} deleted from shopping bag`,
+    message: `Book with id:${id} deleted from shopping cart`,
     item: removeBook,
   });
 });
 
-//Remove all books from shopping bag, clear all
-app.delete("/bag", async (req, res) => {
-  const bagItems = await Bag.deleteMany();
+//Remove all books from shopping cart, clear all
+app.delete("/cart", async (req, res) => {
+  const cartItems = await Cart.deleteMany();
   res
     .status(201)
-    .json({ message: "Your shopping bag is empty", items: bagItems });
+    .json({ message: "Your shopping cart is empty", items: cartItems });
 });
 
-//Find books added to shopping bag
-app.get("/bag", async (req, res) => {
-  const bagItems = await Bag.find();
+//Find books added to shopping cart
+app.get("/cart", async (req, res) => {
+  const cartItems = await Cart.find();
   res.status(201).json({
-    message: "Found some books in your shopping bag!",
-    bagItems: bagItems,
+    message: "Found some books in your shopping cart!",
+    cartItems: cartItems,
   });
 });
 
