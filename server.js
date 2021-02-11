@@ -30,8 +30,9 @@ mongoose.Promise = Promise;
 mongoose.set("useCreateIndex", true);
 
 //   PORT=8000 npm start
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || '8000';
 const app = express();
+app.set("port", port)
 
 // Add middlewares to enable cors and json body parsing
 app.use(cors());
