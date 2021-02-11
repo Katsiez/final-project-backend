@@ -166,7 +166,7 @@ app.post("/login", async (req, res) => {
 
 ////////////////////////////////***BOOK MODEL***////////////////////////////////
 //Seed the database
-// if (process.env.RESET_DATABASE) {
+if (process.env.RESET_DATABASE) {
 const seedDatabase = async () => {
   await Book.deleteMany({});
 
@@ -175,7 +175,7 @@ const seedDatabase = async () => {
   });
 };
 seedDatabase();
-//}
+}
 
 //Show all books
 app.get("/books", async (req, res) => {
