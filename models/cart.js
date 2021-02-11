@@ -1,7 +1,9 @@
 import mongoose from "mongoose";
 
-export const Cart = mongoose.model('cart', {
-	//image??
+export const Cart = mongoose.model("Cart", {
+	imageUrl: {
+		type: String
+	},
 	title: {
 		type: String
 	  },
@@ -17,6 +19,6 @@ export const Cart = mongoose.model('cart', {
 	  },
 	isbn13: {
 		type: Number
-	  },
-	
+	  }
 })
+

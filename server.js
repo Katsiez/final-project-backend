@@ -62,7 +62,7 @@ const parser = multer({ storage });
 const ERR_CANNOT_ADD_IMAGE = "Cannot load the image";
 ////////////////////////////////////////////////////////
 
-///////////////***USER MODEL***///////////////
+///////////////***USER SCHEMA***///////////////
 const userSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -203,7 +203,7 @@ app.get("/books", async (req, res) => {
 // });
 
 
-//Add book images for each bbook
+//Add book images for each book
 app.post("/books/:id/image", parser.single("image"), async (req, res) => {
   const { id } = req.params;
   const { path } = req.file;
@@ -289,12 +289,15 @@ app.get("/books/new_releases/:new_releases", async (req, res) => {
 //Add books to shopping cart
 app.post("/cart", async (req, res) => {
   try {
-    const { title, authors, quanitity } = req.body;
-    //addd image and price to this const??
+    const { imageUrl, title, authors, price, quanitity, isbn13 } = req.body;
+
     const cartItem = new Cart({
+      imageUrl,
       title,
       authors,
+      price,
       quanitity,
+      isbn13
     });
     const newCartItem = await cartItem.save();
     res
