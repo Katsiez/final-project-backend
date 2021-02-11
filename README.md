@@ -1,7 +1,5 @@
-# Express Starter Project
+# Bookmark Reads, final project - backend!
 
-This project includes the packages and babel setup for an express server, and is just meant to make things a little simpler to get up and running with.
+This is my final project for the Technigo Bootcamp, Bookmark Reads. An online bookshop featuring some of my favourite books ever.
 
-## Getting started
-
-Install dependencies with `npm install`, then start the server by running `npm run dev`
+Link: https://final-project-backend-katsiez.herokuapp.com/
